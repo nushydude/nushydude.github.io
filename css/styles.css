@@ -27,19 +27,9 @@ h1, h2 {
   margin: 10px 10px;
 }
 
-a {
-  text-decoration: none;
-  color: #D72323;
-  opacity: 0.7;
-}
-
 p {
   margin: 10px 10px 20px 10px;
   font-size: 12pt;
-}
-
-a:hover {
-  opacity: 1.0;
 }
 
 #header {
@@ -88,6 +78,15 @@ a:hover {
   border-radius: 50%;
 }
 
-#footer {
-  background-color: rgb(200, 200, 200);
+footer {
+  background-color: #CED8DB;
+}
+
+footer .social {
+  font-size: 3vw;
+  text-align: center;
+}
+
+footer .social li {
+  margin: 10px 20px;
 }
