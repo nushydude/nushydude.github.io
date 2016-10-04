@@ -84,10 +84,9 @@ footer {
 
 footer .social {
   font-size: 24pt;
-  font-size: 4vw;
   text-align: center;
 }
 
 footer .social li {
-  margin: 10px 10px;
+  margin: 10px 5px;
 }
