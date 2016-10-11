@@ -21,10 +21,19 @@ nav li {
 }
 */
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
   color: #303841;
+  margin: 10px 10px 20px 10px;
+}
+
+h3 {
+  color: #444b54;
   margin: 10px 10px;
+  font-size: 14pt;
 }
 
 p {
