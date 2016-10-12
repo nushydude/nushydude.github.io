@@ -1,15 +1,24 @@
 $(document).ready(function() {
+  console.log("loaded");
+
   var fieldErrors = {
     name: false,
-    email: false,
+    _replyto: false,
     message: false
   };
 
-  function isEmail(email) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+  function isEmail(str) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(str)) {
       return true;
     }
     return false;
+  }
+
+  function isNotEmpty(str) {
+    if (!str) {
+      return false;
+    }
+    return true;
   }
 
   function updateSubmit() {
@@ -28,53 +37,33 @@ $(document).ready(function() {
     $submit.attr('disabled', false);
   }
 
-  console.log("loaded");
-
   $("#frm-name").keyup(function(e) {
-    var $val = e.target.value;
-    var $err = $("#err-name");
-    //if empty, then display error
-    if (!$val) {
-      $err.removeClass('hide');
-      fieldErrors['name'] = true;
-    } else {
-      if (!$err.hasClass('hide')) {
-        $err.addClass('hide');
-        fieldErrors['name']= false;
-      }
-    }
-    updateSubmit();
+    validate($(this), isNotEmpty);
   });
 
   $("#frm-email").keyup(function(e) {
-    var $val = e.target.value;
-    var $err = $("#err-email");
-    //if empty, then display error
-    if (!isEmail($val)) {
-      $err.removeClass('hide');
-      fieldErrors['email'] = true;
-    } else {
-      if (!$err.hasClass('hide')) {
-        $err.addClass('hide');
-        fieldErrors['email'] = false;
-      }
-    }
-    updateSubmit();
+    validate($(this), isEmail);
   });
 
   $("#frm-message").keyup(function(e) {
-    var $val = e.target.value;
-    var $err = $("#err-message");
-    //if empty, then display error
-    if (!($val)) {
-      $err.removeClass('hide');
-      fieldErrors['message'] = true;
-    } else {
+    validate($(this), isNotEmpty);
+
+  });
+
+  function validate($obj, validateFunc) {
+    var $val = $obj.val();
+    var $err = $obj.parent().children("SPAN:first");
+    var $field = $obj.attr('name');
+
+    if (validateFunc($val)) {
       if (!$err.hasClass('hide')) {
         $err.addClass('hide');
-        fieldErrors['message'] = false;
       }
+    } else {
+      $err.removeClass('hide');
     }
+    fieldErrors[$field] = !$err.hasClass('hide');
     updateSubmit();
-  });
+  }
+
 });
