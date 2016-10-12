@@ -32,8 +32,11 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
               <!--
+
+               class="active"
+               
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Career <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -89,7 +92,7 @@
           Nowadays I spend my leisure time learning new web development because I want to move in that direction.
         </p>
         <p>
-          I havea a son and a daughter and they are very young.
+          I havea a son and a daughter and they are very young; they are not even going to kinder yet.
 
           That's my son with me in the photo, which was shot at the Brighton beach on a
           lovely evening.
@@ -110,19 +113,21 @@
         <p>
           I spent about five and a half years in Japan, where I mainly developed
           printer driver related products for <a href="http://canon.jp/">Canon Inc</a>.
-
-          <em>Printer drivers</em>?
-
-          That sounds unexciting!
-
+        </p>
+        <p><em>Printer drivers?</em></p>
+        <p>That does not sound exciting at all!</p>
+        <p>
           Yes, but I learned a lot of things when I was in Japan.
-
-          I did not work at Canon; Canon simply outsourced many of their printer
-          driver related projects to the company I worked for.
+        </p>
+        <p>
+          I did not work at Canon exactly; Canon simply outsourced many of their projects to the company I worked for.
 
           However, my final year in Japan, I was deployed to one of Canon's technical centres to
           work on the <a href="https://msdn.microsoft.com/en-us/windows/hardware/drivers/print/v4-printer-driver">
           Windows V4 Printer Driver</a>.
+
+          We managed to bring it up to a level which could replace the aging V3 driver much earlier than the
+          management anticipated, which was a huge victory for the team.
         </p>
         <p>
           The most interesting project that I was part of when I was in Japan was a protytype product
@@ -169,25 +174,24 @@
       <div class="row" id="resume">
         <h2>Résumé</h2>
         <p>
-          Until I come up with a nicer <em>web</em> way to present my résumé, you'll have to do with a <em>PDF version</em> of it, which can be downloaded from
-          <a href="https://drive.google.com/file/d/0B5vsOLwTZcUXVkNmM053c0ZlY0E/view">here</a>.
+          Until I come up with a nicer way to present my résumé, unfortunately you'll have to do with a PDF version of it. &nbsp;<a href="files/AnushaDharmasena-Resume-2016.pdf" class="btn btn-default" role="button" target="_blank">Download Résumé</a>
         </p>
       </div>
       <div class="row" id="contact">
         <h2>Love to get in touch?</h2>
         <p>
-          If you like to become acquainted, you may submit the following form, or
-          you can reach me via the social media links in the bottom.
+          If you would like to contact me, you could either fill and submit the following form, or
+          you can connect with me through various social media sites using the links shown in the bottom of the page.
         </p>
         <div id="contact-form">
           <form action="https://formspree.io/nushydude@gmail.com" method="POST">
-            <input type="text" name="name" placeholder="name">
+            <input id="frm-name" type="text" name="name" placeholder="name">&nbsp;<span id="err-name" class="alert alert-warning hide">Please type a name</span>
             <br/>
-            <input type="email" name="_replyto" placeholder="email">
+            <input id="frm-email" type="email" name="_replyto" placeholder="email">&nbsp;<span id="err-email" class="alert alert-warning hide">Please type a valid email address</span>
             <br/>
-            <textarea name="message" placeholder="message"></textarea>
+            <textarea id="frm-message" name="message" placeholder="message"></textarea>&nbsp;<span id="err-message" class="alert alert-warning hide">Please type a message</span>
             <br/>
-            <input type="submit" value="Send">
+            <input id="frm-submit" class="btn btn-default" type="submit" value="Send" disabled='true'>
           </form>
         </div>
       </div>
@@ -233,8 +237,11 @@
     </footer>
 
   <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/main.js"></script>
+
     <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 
   </body>
 </html>

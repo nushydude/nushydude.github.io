@@ -117,7 +117,7 @@ input[type=submit]
 input[type=text],
 input[type=email] {
   width: 300px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 input[type=submit] {
