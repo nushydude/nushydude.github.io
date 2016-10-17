@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  console.log("loaded");
-
   var fieldErrors = {
     name: false,
     _replyto: false,
@@ -22,9 +20,6 @@ $(document).ready(function() {
   }
 
   function updateSubmit() {
-    console.log('field errors:');
-    console.log(fieldErrors);
-
     var $submit = $("#frm-submit");
     for (var key in fieldErrors) {
       if (fieldErrors.hasOwnProperty(key)) {
