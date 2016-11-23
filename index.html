@@ -33,27 +33,6 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
-              <!--
-
-               class="active"
-
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Career <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Overview</a></li>
-                  <li><a href="#">Projects</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="https://drive.google.com/file/d/0B5vsOLwTZcUXVkNmM053c0ZlY0E/view">Resume (PDF)</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Personal <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Family life</a></li>
-                  <li><a href="#">Hobbies</a></li>
-                </ul>
-              </li>
-            -->
               <li><a href="#about_me">About Me</a></li>
               <li><a href="#career">Career at a glance</a></li>
               <li><a href="#resume">Résumé</a></li>
@@ -63,22 +42,22 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
-      <div id="profile">
-        <div id="profile-avatar">
-          <img src="img/profile.jpg" />
-        </div>
-        <div id="profile-text">
-          <h1>Anusha<br>Dharmasena</h1>
-          <p>Software Engineer</p>
-        </div>
-      </div>
+      
     </div>
 
     <div class="container">
+        
+        <div class="row" id="profile">
+            <img src="img/profile.jpg" />
+            <h2>Anusha<br>Dharmasena</h2>
+            <span>Software Engineer | PC Hardware Enthusiast | Gamer </span>
+        </div>
+        
+        
       <div class="row" id="about_me">
         <h2>
           <i class="fa fa-user" aria-hidden="true"></i>
-          A little bit about me
+          About me
         </h2>
         <p>
           My name is Anusha Dharmasena.
@@ -92,53 +71,48 @@
         </p>
         <p>
           I love lots of things: programming, blogging, learning, 
-          reading about PC hardware related news and playing PC games, to name a few.
+          reading about PC hardware related news and playing Crysis 3 on the PC, to name a few.
 
-          Nowadays, I spend my leisure time learning about the latest web technologies 
+          Nowadays, I spend my leisure time mostly learning about the web technologies 
           such as React and Node.js, because I want to move in that direction in my career as 
           a developer.
         </p>
       </div>
+        
       <div class="row" id="career">
         <h2>
           <i class="fa fa-briefcase" aria-hidden="true"></i>
-          Career at a glance
+          Career in brief
         </h2>
-        <h3>First couple of years - Sri Lanka</h3>
+        <h3>In Sri Lanka</h3>
         <p>
           After finishing university, I joined a software company in Sri Lanka which had its HQ in Japan.
-
-          For the first couple of years, I worked on a few web projects with legacy technologies.
-
-          After working there for a couple of years, I was tranferred to the HQ to work on the good stuff,
-          which was actually a contractual obligation.
-
-          Frankly, I joined the company because of this opportunity to work in Japan. 
         </p>
-        <h3>Next five and a half years - Japan</h3>
+        <p>
+          For the first couple of years, I worked on a few web projects with legacy technologies such as PHP, MySQL and Apache.
+
+          After working there for a couple of years, I was tranferred to the HQ to work on the good stuff.
+        </p>
+        <h3>In Japan</h3>
         <p>
           I spent about five and a half years in Japan, where I was worked on
           printer driver related projects, which were outsourced to us by <a href="http://canon.jp/">
           Canon Inc</a>.
 
-          The projects which I was assigned to at the beginning, namely the V3 printer driver
-          and the XPS printer driver, were mature projects. 
+          The projects which I was assigned to at the beginning, namely the V3 printer driver and the XPS printer driver, were mature projects. 
             
           Thus, they weren't as exciting as I would have liked.
         </p>
         <p>
-          After almost 3 years of working in those projects, I was finally given 
-          a chance to develop a product from the scratch.
+          After almost 3 years of working in maintenance projects, I was finally given a chance to develop a product from the scratch.
 
           I would call it "The <abbr title="Scalable Vector Graphics">SVG</abbr> project".
 
           Basically, the goal of the project was to build a PDF to SVG converter.
 
-          It might sound simple, but the generated SVG files had to conform to strict 
-          regulations.
+          It might sound simple, but the generated SVG files had to conform to strict regulations.
 
-          None of the PDF to SVG conversion tools available in the market at the time could 
-          achieve what we wanted, which was why the project materialised in the first place.
+          None of the PDF to SVG conversion tools available in the market at the time could achieve what we wanted, which was why the project materialised in the first place.
 
           It was my first <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)">Agile</a>
           project, and I was a main designer/developer.
@@ -165,7 +139,7 @@
           because I could bid farewell to Japan without hurting the progress of the project.
         </p>
 
-        <h3 id='career-aus'>First year after moving to Australia</h3>
+        <h3 id='career-aus'>In Australia</h3>
         <p>
           Soon after I moved to Melbourne, I found a job through a referral.
 
@@ -175,7 +149,7 @@
           This was my first ever experience working with a JavaScript framework.
         </p>
         <p>
-          I started learned about React.js from this point and I am still learning new things every day.
+          I started learning about React.js from this point and I am still learning new things every day.
 
           The deeper I dug into React.js, I fell in love with it.
 
@@ -190,53 +164,40 @@
           <em>And it's official: I want to become a web developer.</em>
         </p>
       </div>
+        
       <div class="row" id="resume">
         <h2>
           <i class="fa fa-file-text-o" aria-hidden="true"></i>
-          Want to hire me? Check out my Résumé
+          Resume
         </h2>
         <p>
-          Until I come up with a nicer way to present my résumé, unfortunately you'll have to do 
-          with a PDF version of it.
+          A PDF version of my resume can be downloaded by clicking the button below.
         </p>
         <p>
-          <a href="files/AnushaDharmasena-Resume-2016.pdf" class="btn btn-default btn-lg" role="button" target="_blank">
-            <span class="glyphicon glyphicon-download"></span>&nbsp;Download my Résumé
+          <a href="files/AnushaDharmasena-Resume-2016.pdf" class="btn btn-default btn-lg" role="button">
+            <span class="glyphicon glyphicon-download"></span>&nbsp;Download
           </a>
         </p>
       </div>
+        
       <div class="row" id="contact">
         <h2>
           <i class="fa fa-envelope-o" aria-hidden="true"></i>
-          Love to get in touch?
+          Get in touch
         </h2>
         <p>
           Please fill and submit this form or connect with me via any of the social media links below.
         </p>
         <div id="contact-form">
           <form action="https://formspree.io/nushydude@gmail.com" method="POST">
-            <div>
-              <input id="frm-name" type="text" name="name" placeholder="name">
-              <span class="alert hide">
-                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-              </span>
-            </div>
-            <div>
-              <input id="frm-email" type="email" name="_replyto" placeholder="email">
-              <span class="alert hide">
-                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-              </span>
-            </div>
-            <div>
-              <textarea id="frm-message" name="message" placeholder="message"></textarea>
-              <span class="alert hide">
-                  <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-              </span>
-            </div>
+            <input id="frm-name" type="text" name="name" placeholder="name"><br>
+            <input id="frm-email" type="email" name="_replyto" placeholder="email"><br>
+            <textarea id="frm-message" name="message" placeholder="message"></textarea><br>
             <input id="frm-submit" class="btn btn-default" type="submit" value="Send" disabled='true'>
           </form>
         </div>
       </div>
+        
     </div>
 
     <footer class="footer">
@@ -264,7 +225,7 @@
                 </a>
               </li>
               <li>
-                <a href="http://facebook.com/anushand" target="_blank">
+                <a href="https://www.facebook.com/anushand" target="_blank">
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
               </li>

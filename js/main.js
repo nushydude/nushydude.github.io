@@ -47,17 +47,16 @@ $(document).ready(function() {
 
   function validate($obj, validateFunc) {
     var $val = $obj.val();
-    var $err = $obj.parent().children("SPAN:first");
     var $field = $obj.attr('name');
 
     if (validateFunc($val)) {
-      if (!$err.hasClass('hide')) {
-        $err.addClass('hide');
+      if ($obj.hasClass('error')) {
+        $obj.removeClass('error');
       }
     } else {
-      $err.removeClass('hide');
+      $obj.addClass('error');
     }
-    fieldErrors[$field] = !$err.hasClass('hide');
+    fieldErrors[$field] = $obj.hasClass('error');
     updateSubmit();
   }
 
