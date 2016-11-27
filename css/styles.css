@@ -35,7 +35,7 @@ p {
 }
 
 
-#header {
+header {
     background: #c8c8c8 url(../img/banner2.jpg) center center no-repeat;
     height: 50vh;
     background-size: cover;
@@ -58,42 +58,15 @@ p {
 
 
 .row:nth-child(n) {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
     border-bottom: 1px solid #ddd;    
 }
 
 .row:last-child {
-    padding-bottom: 0;
     border-bottom: none !important;
 }
 
 
 /******************** contact form ********************/
-
-form {
-    margin-left: 10px;
-}
-
-input,
-textarea
-{
-    border-radius: 5px;
-    border: 1px solid #999;
-    padding: 5px;
-    margin-bottom: 15px;
-    width: 300px;
-}
-
-input[type=submit] {
-    padding: 5px 20px;
-    width: 100px; /* override */
-}
-
-textarea {
-    height: 140px;
-    resize: none;
-}
 
 .error {
     background-color: #fff4f4; 
