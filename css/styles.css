@@ -9,20 +9,14 @@ font-family: 'Montserrat', sans-serif;
     padding: 0;
 }
 
-body {
-  padding-top: 50px;
-}
-@media (max-width: 979px) {
-  body {
-    padding-top: 0px;
-  }
-}
 
 body {
     background: rgb(240, 240, 240);
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 1.5;
+    position: relative;
+    top: 50px;
 }
 
 h1, h2, h3 {
@@ -44,7 +38,6 @@ p {
 
 section {
     padding: 100px 20px;
-    position: relative;
 }
 
 nav {
