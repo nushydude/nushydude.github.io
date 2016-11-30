@@ -36,7 +36,8 @@
     <body>
       
         <header>
-              <nav class="navbar navbar-default">
+              <nav class="navbar navbar-fixed-top">
+                  
                     <div class="container-fluid">
                         
                           <!-- Brand and toggle get grouped for better mobile display -->
@@ -54,265 +55,323 @@
 
                           <!-- Collect the nav links, forms, and other content for toggling -->
                           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <ul class="nav navbar-nav">
-                                      <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                                      <li><a href="#about_me">About Me</a></li>
-                                      <li><a href="#career">Career at a glance</a></li>
-                                      <li><a href="#resume">Résumé</a></li>
+                                <ul class="nav navbar-nav navbar-right">
+                                      <li><a href="#about-me">About me <span class="sr-only">(current)</span></a></li>
+                                      <li><a href="#career">Career in brief</a></li>
+                                      <li><a href="#resume">Resume</a></li>
                                       <li><a href="http://www.anushand.com" target="_blank">Blog</a></li>
-                                      <li><a href="#contact">Contact</a></li>
+                                      <li><a href="#contact">Contact me</a></li>
                                 </ul>   
                           </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
-              </nav>      
-        </header>
-
-        <div class="container">
-
-            <div class="row" id="profile">
-                <div class="col-md-12">
-                    <img src="img/profile.jpg" />
-                    <h2>Anusha<br>Dharmasena</h2>
-                    <span>Software Engineer | PC Hardware Enthusiast | Gamer </span>
-                </div>
-            </div>
-
-            <div class="row" id="about_me">
-                <div class="col-md-12">
-                    <h2>
-                          <i class="fa fa-user" aria-hidden="true"></i>
-                          About me
-                    </h2>
-                    <p>
-                          My name is Anusha Dharmasena.
-
-                          I am a 31-year-old Software Engineer, originally from
-                          Sri Lanka, and I've been developing software for over 8 years.
-
-                          I moved to Australia at the beginning of 2016 with my family.
-
-                          We live in Oakleigh East, a South Eastern suburb of Melbourne.
-                    </p>
-                    <p>
-                          I love lots of things: programming, blogging, learning, 
-                          reading about PC hardware related news and playing Crysis 3 on the PC, to name a few.
-
-                          Nowadays, I spend my leisure time mostly learning about the web technologies 
-                          such as React and Node.js, because I want to move in that direction in my career as 
-                          a developer.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="row" id="career">
-                <div class="col-md-12">
-                    <h2>
-                          <i class="fa fa-briefcase" aria-hidden="true"></i>
-                          Career in brief
-                    </h2>
-
-                    <h3>In Sri Lanka</h3>
-
-                    <p>
-                      After finishing university, I joined a software company in Sri Lanka which had its HQ in Japan.
-                    </p>
-
-                    <p>
-                      For the first couple of years, I worked on a few web projects with legacy technologies such as PHP, MySQL and Apache.
-
-                      After working there for a couple of years, I was tranferred to the HQ to work on the good stuff.
-                    </p>
-
-                    <h3>In Japan</h3>
-
-                    <p>
-                        I spent about five and a half years in Japan, where I was worked on
-                        printer driver related projects, which were outsourced to us by <a href="http://canon.jp/">
-                        Canon Inc</a>.
-
-                        The projects which I was assigned to at the beginning, namely the V3 printer driver and the XPS printer driver, were mature projects. 
-
-                        Thus, they weren't as exciting as I would have liked.
-                    </p>
-
-                    <p>
-                        After almost 3 years of working in maintenance projects, I was finally given a chance to develop a product from the scratch.
-
-                        I would call it "The <abbr title="Scalable Vector Graphics">SVG</abbr> project".
-
-                        Basically, the goal of the project was to build a PDF to SVG converter.
-
-                        It might sound simple, but the generated SVG files had to conform to strict regulations.
-
-                        None of the PDF to SVG conversion tools available in the market at the time could achieve what we wanted, which was why the project materialised in the first place.
-
-                        It was my first <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)">Agile</a>
-                        project, and I was a main designer/developer.
-
-                        The SVG project had two major parts - the part two was about converting the SVG file 
-                        back to PDF.
-
-                        Before the phase 2 of the project materialised, I was detatched from the SVG team to work on a 
-                        project which was more important, because of my understanding of the XPS driver's source code.
-                    </p>
-
-                    <p>
-                        This important project was the 
-                        <a href="https://msdn.microsoft.com/en-us/windows/hardware/drivers/print/v4-printer-driver">
-                        Windows V4 Printer Driver</a> project, which happened to be an Agile project as well.
-
-                        A team of four from my company, including myself, was deployed to the technical centre in
-                        Musashi Kosugi to work on the project.
-
-                        The goal was to port all the necessary features from the to-be-phased-out V3 driver to the 
-                        new V4 driver before mid 2016, because Microsoft was planning to discontinue supporting 
-                        the old GDI printer driver architecture going forward.
-
-                        We reached the milestones much earlier than the management anticipated, which was relieving
-                        because I could bid farewell to Japan without hurting the progress of the project.
-                    </p>
-
-                    <h3 id='career-aus'>In Australia</h3>
-
-                    <p>
-                        Soon after I moved to Melbourne, I found a job through a referral.
-
-                        Despite being hired as an Embedded Software Engineer, I was asigned to develop a 
-                        <strong>React.js</strong> web interface for an upcoming, super complicated product.
-
-                        This was my first ever experience working with a JavaScript framework.
-                    </p>
-
-
-                    <p>
-                        I started learning about React.js from this point and I am still learning new things every day.
-
-                        The deeper I dug into React.js, I fell in love with it.
-
-                        For whatever reason, it felt more enjoyable to play around React.
-
-                        It's possibly because I always wanted to move into UI design, however I did not get the 
-                        opportunity to do that when I was working printer drivers.
-
-                        At my current work place, I have all the freedom to learn, experiment and innovate.
-                    </p>
-
-                    <p>
-                        <em>And it's official: I want to become a web developer.</em>
-                    </p>
-                </div>
-            </div>
-
-            <div class="row" id="resume">
-                
-                <div class="col-md-12">
-                    
-                    <h2>
-                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                        Resume
-                    </h2>
-
-                    <p>
-                        A PDF version of my resume can be downloaded by clicking the button below.
-                    </p>
-
-                    <p>
-                        <a href="files/AnushaDharmasena-Resume-2016.pdf" class="btn btn-default btn-lg" role="button">
-                            <span class="glyphicon glyphicon-download"></span>&nbsp;Download
-                        </a>
-                    </p>
-                
-                </div>
-                
-            </div>
+              </nav>   
             
-            <div class="row" id="contact">
+        </header>
+        
+        <div id="content">
+        
+            <section id="profile">
 
-                <div class="col-md-12">
-                
-                    <h2>
-                          <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                          Get in touch
-                    </h2>
+                <div class="container-fluid">
 
-                    <p>
-                        Please fill and submit this form or connect with me via any of the social media links below.
-                    </p>
-                    
+                    <div class="row animate-row">
+                        <div class="col-md-12">
+                            <img src="img/profile.jpg" />
+                            <h2>Anusha<br>Dharmasena</h2>
+                            <span>Software Engineer | PC Hardware Enthusiast | Gamer </span>
+                        </div>
+                    </div>
 
-                    <div class="col-md-6" id="contact-form">
+                </div>
 
-                        <form action="https://formspree.io/nushydude@gmail.com" method="POST">
+            </section>
 
-                            <div class="form-group">                                
-                                <input id="frm-name" type="text" name="name" placeholder="name" class="form-control">
-                            </div>
 
-                            <div class="form-group">
-                                <input id="frm-email" type="email" name="_replyto" placeholder="email"  class="form-control">
-                            </div>
 
-                            <div class="form-group">
-                                <textarea id="frm-message" name="message" placeholder="message"  class="form-control" rows="8"></textarea>
-                            </div>
+            <section id="about-me">
 
-                            <div class="form-group">
-                                <input id="frm-submit" class="btn btn-default" type="submit" value="Send" disabled='true'>
-                            </div>
+                <div class="container-fluid">
 
-                        </form>
+                    <div class="row animate-row">
+
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <h2>
+                                  <i class="fa fa-user" aria-hidden="true"></i>
+                                  About me
+                            </h2>
+                            <p>
+                                  My name is Anusha Dharmasena.
+
+                                  I am a 31-year-old Software Engineer, originally from
+                                  Sri Lanka, and I've been developing software for over 8 years.
+
+                                  I moved to Australia at the beginning of 2016 with my family.
+
+                                  We live in Oakleigh East, a South Eastern suburb of Melbourne.
+                            </p>
+                            <p>
+                                  I love lots of things: programming, blogging, learning, 
+                                  reading about PC hardware related news and playing Crysis 3 on the PC, to name a few.
+
+                                  Nowadays, I spend my leisure time mostly learning about the web technologies 
+                                  such as React and Node.js, because I want to move in that direction in my career as 
+                                  a developer.
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
 
                     </div>
 
                 </div>
 
-            </div>
+            </section>
 
+            <section id="career">
+
+                <div class="container-fluid">
+
+                    <div class="row animate-row">
+
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <h2>
+                                  <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                  Career in brief
+                            </h2>
+
+                            <h3>In Sri Lanka</h3>
+
+                            <p>
+                              After finishing university, I joined a software company in Sri Lanka which had its HQ in Japan.
+                            </p>
+
+                            <p>
+                              For the first couple of years, I worked on a few web projects with legacy technologies such as PHP, MySQL and Apache.
+
+                              After working there for a couple of years, I was tranferred to the HQ to work on the good stuff.
+                            </p>
+
+                            <h3>In Japan</h3>
+
+                            <p>
+                                I spent about five and a half years in Japan, where I was worked on
+                                printer driver related projects, which were outsourced to us by <a href="http://canon.jp/">
+                                Canon Inc</a>.
+
+                                The projects which I was assigned to at the beginning, namely the V3 printer driver and the XPS printer driver, were mature projects. 
+
+                                Thus, they weren't as exciting as I would have liked.
+                            </p>
+
+                            <p>
+                                After almost 3 years of working in maintenance projects, I was finally given a chance to develop a product from the scratch.
+
+                                I would call it "The <abbr title="Scalable Vector Graphics">SVG</abbr> project".
+
+                                Basically, the goal of the project was to build a PDF to SVG converter.
+
+                                It might sound simple, but the generated SVG files had to conform to strict regulations.
+
+                                None of the PDF to SVG conversion tools available in the market at the time could achieve what we wanted, which was why the project materialised in the first place.
+
+                                It was my first <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)">Agile</a>
+                                project, and I was a main designer/developer.
+
+                                The SVG project had two major parts - the part two was about converting the SVG file 
+                                back to PDF.
+
+                                Before the phase 2 of the project materialised, I was detatched from the SVG team to work on a 
+                                project which was more important, because of my understanding of the XPS driver's source code.
+                            </p>
+
+                            <p>
+                                This important project was the 
+                                <a href="https://msdn.microsoft.com/en-us/windows/hardware/drivers/print/v4-printer-driver">
+                                Windows V4 Printer Driver</a> project, which happened to be an Agile project as well.
+
+                                A team of four from my company, including myself, was deployed to the technical centre in
+                                Musashi Kosugi to work on the project.
+
+                                The goal was to port all the necessary features from the to-be-phased-out V3 driver to the 
+                                new V4 driver before mid 2016, because Microsoft was planning to discontinue supporting 
+                                the old GDI printer driver architecture going forward.
+
+                                We reached the milestones much earlier than the management anticipated, which was relieving
+                                because I could bid farewell to Japan without hurting the progress of the project.
+                            </p>
+
+                            <h3 id='career-aus'>In Australia</h3>
+
+                            <p>
+                                Soon after I moved to Melbourne, I found a job through a referral.
+
+                                Despite being hired as an Embedded Software Engineer, I was asigned to develop a 
+                                <strong>React.js</strong> web interface for an upcoming, super complicated product.
+
+                                This was my first ever experience working with a JavaScript framework.
+                            </p>
+
+
+                            <p>
+                                I started learning about React.js from this point and I am still learning new things every day.
+
+                                The deeper I dug into React.js, I fell in love with it.
+
+                                For whatever reason, it felt more enjoyable to play around React.
+
+                                It's possibly because I always wanted to move into UI design, however I did not get the 
+                                opportunity to do that when I was working printer drivers.
+
+                                At my current work place, I have all the freedom to learn, experiment and innovate.
+                            </p>
+
+                            <p>
+                                <em>And it's official: I want to become a web developer.</em>
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+
+                    </div>                                
+
+                </div>
+
+            </section>
+
+            <section id="resume">
+
+                <div class="container-fluid">
+
+                    <div class="row animate-row" id="resume">
+
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+
+                            <h2>
+                                <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                Resume
+                            </h2>
+
+                            <p>
+                                A PDF version of my resume can be downloaded by clicking the button below.
+                            </p>
+
+                            <p>
+                                <a href="files/AnushaDharmasena-Resume-2016.pdf" class="btn btn-default btn-lg" role="button">
+                                    <span class="glyphicon glyphicon-download"></span>&nbsp;Download
+                                </a>
+                            </p>
+
+                        </div>
+                        <div class="col-lg-2"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section id="contact">
+
+                <div class="container-fluid">    
+
+                    <div class="row animate-row" >
+
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+
+                            <h2>
+                                  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                  Contact me
+                            </h2>
+
+                            <p>
+                                You can either use the following form to sent me a message or you can connect with me using the social media handles provided in the footer.
+                            </p>
+
+
+                            <div class="col-xs-12 col-sm-10 col-md-8" id="contact-form">
+
+                                <form action="https://formspree.io/nushydude@gmail.com" method="POST">
+
+                                    <div class="form-group">                                
+                                        <input id="frm-name" type="text" name="name" placeholder="name" class="form-control">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input id="frm-email" type="email" name="_replyto" placeholder="email"  class="form-control">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <textarea id="frm-message" name="message" placeholder="message"  class="form-control" rows="8"></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input id="frm-submit" class="btn btn-default" type="submit" value="Send" disabled='true'>
+                                    </div>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+                        <div class="col-lg-2"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+      
         </div>
-      
-      
-
-        <footer>
+        
+        
+        <footer class="footer">
             <div class="container">
-                <div class="row">
-                    <ul class="list-inline social">
-                        <li>
-                            <a href="https://au.linkedin.com/in/cdandharmasena" target="_blank">
-                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/nushydude" target="_blank">
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/anushand" target="_blank">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/user/nushydyde/videos?flow=grid&view=1" target="_blank">
-                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/anushand" target="_blank">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/u/0/+AnushaDharmasena" target="_blank">
-                                <i class="fa fa-google-plus" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="row animate-row">
+                    <div class="col-md-6">
+                        <ul class="list-inline social">
+                            <li>
+                                <a href="https://au.linkedin.com/in/cdandharmasena" target="_blank">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/nushydude" target="_blank">
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/anushand" target="_blank">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/user/nushydyde/videos?flow=grid&view=1" target="_blank">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/anushand" target="_blank">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/u/0/+AnushaDharmasena" target="_blank">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <p id="tm">&copy; 2016 - Anusha Dharmasena</p>
+                    </div>
                 </div>
             </div>
         </footer>
 
-
+        
 
         <!-- Scripts  -->
         <!-- Placed at the end of the document so the pages load faster -->

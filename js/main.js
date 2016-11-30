@@ -59,5 +59,42 @@ $(document).ready(function() {
     fieldErrors[$field] = $obj.hasClass('error');
     updateSubmit();
   }
+    
+
+    // animate to section
+    var $links = $("nav li");
+    for (var i = 0; i < $links.length; i++) {
+        //console.log($links[i]);
+        $links[i].addEventListener("click", navigate);
+    }
+    
+    function navigate(e) {
+        e.preventDefault();
+        
+        //var 
+        
+        //href="#about-me"
+        
+        var section = $(this).first();
+        
+        console.log(section);
+        
+        //console.log(this);
+        //var sectionTop = $(this).offset().top;
+        //var docTop = document.documentElement.scrollTop;
+        
+        //console.log("SectionTop", sectionTop);
+        //console.log("DocTop", docTop);
+        
+        //$("html body").animate({ scrollTop: 1000 }, 1000);
+    }
+    
+    
+
+    
+    
+    
+    
+    
 
 });
