@@ -60,7 +60,7 @@ $(document).ready(function() {
     updateSubmit();
   }
     
-
+    /*
     // animate to section
     var $links = $("nav li");
     for (var i = 0; i < $links.length; i++) {
@@ -69,15 +69,15 @@ $(document).ready(function() {
     }
     
     function navigate(e) {
-        e.preventDefault();
+        //e.preventDefault();
         
         //var 
         
         //href="#about-me"
         
-        var section = $(this).first();
+        //var section = $(this).first();
         
-        console.log(section);
+        //console.log(section);
         
         //console.log(this);
         //var sectionTop = $(this).offset().top;
@@ -90,7 +90,7 @@ $(document).ready(function() {
     }
     
     
-
+    */
     
     
     
