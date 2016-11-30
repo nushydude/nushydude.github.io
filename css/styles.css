@@ -40,10 +40,6 @@ section {
     padding: 100px 20px;
 }
 
-nav {
-    z-index: 9999;
-    height: 50px;
-}
 
 nav a {
     font-weight: 700;
