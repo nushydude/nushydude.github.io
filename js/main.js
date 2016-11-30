@@ -60,6 +60,13 @@ $(document).ready(function() {
     updateSubmit();
   }
     
+    // auto collapse the hamburger menu after clicking on a link
+    $(document).on('click','.navbar-collapse.in',function(e) {
+        if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+            $(this).collapse('hide');
+        }
+    });
+    
     /*
     // animate to section
     var $links = $("nav li");
