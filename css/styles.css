@@ -20,7 +20,6 @@ body {
 
 body {
     background: rgb(240, 240, 240);
-    color: #3A4750;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 1.5;
@@ -45,6 +44,7 @@ p {
 
 section {
     padding: 100px 20px;
+    position: relative;
 }
 
 nav {
@@ -96,7 +96,7 @@ nav a {
 
 /*********************** footer ***********************/
 footer {
-    background-color: #CED8DB;
+    background-color: #333;
 }
 
 footer .social {
@@ -105,7 +105,20 @@ footer .social {
 }
 
 footer .social li {
-    margin: 10px 5px;
+    margin: 0 5px;
+}
+
+footer a:link, a:visited, #tm {
+    color: #ddd;
+}
+
+footer a:hover {
+    color: #888;
+}
+
+#tm {
+    text-align: center;
+    line-height: 30px;
 }
 
 
