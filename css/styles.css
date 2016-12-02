@@ -9,6 +9,11 @@ font-family: 'Montserrat', sans-serif;
     padding: 0;
 }
 
+html,
+body,
+#cover {
+    height: 100%;
+}
 
 body {
     background: #f0f0f0;
@@ -20,16 +25,20 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', helvetica, arial, sans-serif;
     margin-left: 10px;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #303841;
 }
 
-h3 {
-    color: #444b54;
+h1 {
+    padding-bottom: 30px;
+}
+
+h2 {
+    padding-bottom: 25px;
 }
 
 p {
@@ -41,9 +50,10 @@ section {
 }
 
 
-nav a {
-    font-weight: 700;
+nav.navbar-inverse {
+    background-color: rgba(0, 0, 0, 0.75);
 }
+
 
 .navbar-brand img {
     height: 50px;
@@ -52,18 +62,20 @@ nav a {
 
 
 
-#banner {
-    background: #c8c8c8 url(../img/banner3.jpg) center center no-repeat;
+#cover {
+    background: #c8c8c8 url(../img/banner3.jpg) bottom right no-repeat;
     background-size: cover;
-    height: 100vh;
-    text-align: center;
+    display: table;
+    width: 100%;
+    padding: 0 20%;
+    box-shadow: inset 0 0 200px #000;
+    
 }
 
-#banner a {
-    position: relative;
-    width: 100px;
-    bottom: 20px;
-    display: none;
+#cover.cover-text {
+    text-align: center;
+    display: none;  
+    vertical-align: middle;
 }
 
 /*********************** profile ***********************/
@@ -82,7 +94,7 @@ nav a {
 /*********************** profile ***********************/
 
 
-#content section:nth-child(odd) {
+section:nth-child(odd) {
     background-color: #dfdfdf;    
 }
 
@@ -143,6 +155,12 @@ section a:active {
     color: #b57726;
     position: relative;
     top: 1px;
+}
+
+@media only screen and ( max-width: 568px ) {
+    section {
+        padding: 10px 10px;
+    }
 }
 
 

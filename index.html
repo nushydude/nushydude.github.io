@@ -59,13 +59,15 @@
                   </div>
             </div>
         </nav>   
-                
-        <div id="content">
-        
-            <section id="banner">
-                <a class="btn btn-danger btn-large" href="#about-me">
-                    <span class="glyphicon glyphicon-chevron-down"></span>
-                </a>
+                        
+            <section id="cover">
+                <!--
+                <div class="cover-text">
+                    <a class="btn btn-danger btn-large" href="#about-me">
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                </div>
+                -->
             </section>
 
             <section id="about-me">
@@ -75,10 +77,10 @@
                     <div class="row">
                         
                         <div class="col-md-8 col-md-offset-2">
-                            <h2>
+                            <h1>
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 About me
-                            </h2>
+                            </h1>
                         </div>
                         
                     </div>
@@ -120,12 +122,12 @@
                     <div class="row">
 
                         <div class="col-md-8 col-md-offset-2">
-                            <h2>
+                            <h1>
                                   <i class="fa fa-briefcase" aria-hidden="true"></i>
                                   Career
-                            </h2>
+                            </h1>
 
-                            <h3>In Sri Lanka</h3>
+                            <h2>In Sri Lanka</h2>
 
                             <p>
                                 After finishing university, I joined a software firm with its HQ in Japan. 
@@ -133,7 +135,7 @@
                                 I learned Japanese and worked on Web Applications during my 2 year span there.
                             </p>
 
-                            <h3>In Japan</h3>
+                            <h2>In Japan</h2>
 
                             <p>
                                 Next I got the opportunity to work at the HQ in Tokyo. 
@@ -162,7 +164,7 @@
                                 Our team was so young, passionate and agile, that we could bring it on track for release in only 9 months.
                             </p>
 
-                            <h3 id='career-aus'>In Australia</h3>
+                            <h2 id='career-aus'>In Australia</h2>
 
                             <p>
                                 After moving to Australia, my experience landed me a job quickly. 
@@ -189,21 +191,23 @@
 
                         <div class="col-md-8 col-md-offset-2">
 
-                            <h2>
+                            <h1>
                                 <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                 Resume
-                            </h2>
+                            </h1>
 
                             <p>
                                 A PDF version of my resume can be downloaded by clicking the button below.
                             </p>
 
                             <p>
-                                <a href="files/AnushaDharmasena-Resume-2016.pdf" class="btn btn-default btn-lg" role="button">
+                                <button onclick="location.href='files/AnushaDharmasena-Resume-2016.pdf';" class="btn btn-danger btn-lg" role="button">
                                     <span class="glyphicon glyphicon-download"></span>&nbsp;Download
-                                </a>
+                                </button>
                             </p>
 
+                            
+                            
                         </div>
 
                     </div>
@@ -220,10 +224,10 @@
 
                         <div class="col-md-8 col-md-offset-2">
 
-                            <h2>
+                            <h1>
                                   <i class="fa fa-envelope-o" aria-hidden="true"></i>
                                   Contact me
-                            </h2>
+                            </h1>
 
                             <p>
                                 You can either use the following form to sent me a message or you can connect with me using the social media handles provided in the footer.
@@ -234,7 +238,7 @@
 
                                 <form action="https://formspree.io/nushydude@gmail.com" method="POST">
 
-                                    <div class="form-group">                                
+                                    <div class="form-group">
                                         <input id="frm-name" type="text" name="name" placeholder="name" class="form-control">
                                     </div>
 
@@ -247,7 +251,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <input id="frm-submit" class="btn btn-default" type="submit" value="Send" disabled='true'>
+                                        <input id="frm-submit" class="btn btn-danger btn-lg" type="submit" value="Send message" disabled='true'>
                                     </div>
 
                                 </form>
@@ -261,9 +265,7 @@
                 </div>
 
             </section>
-      
-        </div>
-        
+              
         
         <footer class="footer">
             <div class="container-fluid">
