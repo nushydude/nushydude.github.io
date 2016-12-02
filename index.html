@@ -46,13 +46,13 @@
                               <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="#">
-                            <img alt="CDAND" src="img/logo.png" width="30px"/>
+                            <img alt="CDAND" src="img/logo.png"/>
                         </a>
                   </div>
                   <div class="collapse navbar-collapse" id="myNavbar">
                         <ul class="nav navbar-nav navbar-right">
                               <li><a href="#about-me">About me</a></li>
-                              <li><a href="#career">Career in brief</a></li>
+                              <li><a href="#career">Career</a></li>
                               <li><a href="#resume">Resume</a></li>
                               <li><a href="http://www.anushand.com" target="_blank">Blog</a></li>
                               <li><a href="#contact">Contact me</a></li>
@@ -63,57 +63,51 @@
                 
         <div id="content">
         
-            <section id="profile">
-
-                <div class="container-fluid">
-
-                    <div class="row animate-row">
-                        <div class="col-md-12">
-                            <img src="img/profile.jpg" />
-                            <h2>Anusha<br>Dharmasena</h2>
-                            <span>Software Engineer | PC Hardware Enthusiast | Gamer </span>
-                        </div>
-                    </div>
-
-                </div>
-
+            <section id="banner">
+                <a class="btn btn-danger btn-large" href="#about-me">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </a>
             </section>
-
-
 
             <section id="about-me">
 
                 <div class="container-fluid">
 
-                    <div class="row animate-row">
-
-                        <div class="col-lg-2"></div>
-                        <div class="col-lg-8">
+                    <div class="row">
+                        
+                        <div class="col-md-8 col-md-offset-2">
                             <h2>
-                                  <i class="fa fa-user" aria-hidden="true"></i>
-                                  About me
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                About me
                             </h2>
-                            <p>
-                                  My name is Anusha Dharmasena.
-
-                                  I am a 31-year-old Software Engineer, originally from
-                                  Sri Lanka, and I've been developing software for over 8 years.
-
-                                  I moved to Australia at the beginning of 2016 with my family.
-
-                                  We live in Oakleigh East, a South Eastern suburb of Melbourne.
-                            </p>
-                            <p>
-                                  I love lots of things: programming, blogging, learning, 
-                                  reading about PC hardware related news and playing Crysis 3 on the PC, to name a few.
-
-                                  Nowadays, I spend my leisure time mostly learning about the web technologies 
-                                  such as React and Node.js, because I want to move in that direction in my career as 
-                                  a developer.
-                            </p>
                         </div>
-                        <div class="col-lg-2"></div>
+                        
+                    </div>
+                    
+                    <div class="row">
 
+                        <div class="col-md-2 col-md-offset-2" id="profile">
+                            <img src="img/profile.jpg" id="profile-img" class="img-circle"/>
+                            <h3>Anusha<br>Dharmasena</h3>
+                            <p>Software Engineer</p>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <p>
+                                I am a Software Engineer from Sri Lanka currently based in Melbourne.
+                                
+                                I used to work on software projects involving low-level languages like drivers and rendering engines, 
+                                but recently I have grown a passion for web development.
+                            </p>
+                            <p>
+                                I am a PC gamer and I love playing first person shooters. If someone asked what my hobby was, I used to say <em>PC Gaming</em>. I really loved Crysis 3.
+                            </p>
+                            <p>
+                                However, as a result of my passion for web development, I've found a new <em>main</em> hobby: learning web! 
+                            </p>
+                            
+                        </div>
+                        
                     </div>
 
                 </div>
@@ -124,121 +118,77 @@
 
                 <div class="container-fluid">
 
-                    <div class="row animate-row">
+                    <div class="row">
 
-                        <div class="col-lg-2"></div>
-                        <div class="col-lg-8">
+                        <div class="col-md-8 col-md-offset-2">
                             <h2>
                                   <i class="fa fa-briefcase" aria-hidden="true"></i>
-                                  Career in brief
+                                  Career
                             </h2>
 
                             <h3>In Sri Lanka</h3>
 
                             <p>
-                              After finishing university, I joined a software company in Sri Lanka which had its HQ in Japan.
-                            </p>
-
-                            <p>
-                              For the first couple of years, I worked on a few web projects with legacy technologies such as PHP, MySQL and Apache.
-
-                              After working there for a couple of years, I was tranferred to the HQ to work on the good stuff.
+                                After finishing university, I joined a software firm with its HQ in Japan. 
+                                
+                                I learned Japanese and worked on Web Applications during my 2 year span there.
                             </p>
 
                             <h3>In Japan</h3>
 
                             <p>
-                                I spent about five and a half years in Japan, where I was worked on
-                                printer driver related projects, which were outsourced to us by <a href="http://canon.jp/">
-                                Canon Inc</a>.
-
-                                The projects which I was assigned to at the beginning, namely the V3 printer driver and the XPS printer driver, were mature projects. 
-
-                                Thus, they weren't as exciting as I would have liked.
+                                Next I got the opportunity to work at the HQ in Tokyo. 
+                                
+                                Initially I was assigned to printer driver projects, which were in their maintenance phases.
                             </p>
 
                             <p>
-                                After almost 3 years of working in maintenance projects, I was finally given a chance to develop a product from the scratch.
+                                After three years, I got the chance to develop a new product for Canon.  
+                                
+                                Internally it was called "The <abbr title="Scalable Vector Graphics">SVG</abbr> project".
 
-                                I would call it "The <abbr title="Scalable Vector Graphics">SVG</abbr> project".
+                                The goal was to build a PDF to SVG converter - conforming to very, very strict regulations.
 
-                                Basically, the goal of the project was to build a PDF to SVG converter.
+                                It was my first <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)">Agile</a> project.
 
-                                It might sound simple, but the generated SVG files had to conform to strict regulations.
-
-                                None of the PDF to SVG conversion tools available in the market at the time could achieve what we wanted, which was why the project materialised in the first place.
-
-                                It was my first <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)">Agile</a>
-                                project, and I was a main designer/developer.
-
-                                The SVG project had two major parts - the part two was about converting the SVG file 
-                                back to PDF.
-
-                                Before the phase 2 of the project materialised, I was detatched from the SVG team to work on a 
-                                project which was more important, because of my understanding of the XPS driver's source code.
+                                The phase 1 was a success, however I was pulled out of phase 2 to work on the V4 project which was in a critical condition.
                             </p>
 
-                            <p>
-                                This important project was the 
-                                <a href="https://msdn.microsoft.com/en-us/windows/hardware/drivers/print/v4-printer-driver">
-                                Windows V4 Printer Driver</a> project, which happened to be an Agile project as well.
+                            <p> 
+                                The goal of the <a href="https://msdn.microsoft.com/en-us/windows/hardware/drivers/print/v4-printer-driver">
+                                Windows V4 Printer Driver</a> project was to port features of the to-be-phased-out V3 driver.
+                                
+                                Microsoft had deadline in place, and it needed a lot of work to meet that. 
 
-                                A team of four from my company, including myself, was deployed to the technical centre in
-                                Musashi Kosugi to work on the project.
-
-                                The goal was to port all the necessary features from the to-be-phased-out V3 driver to the 
-                                new V4 driver before mid 2016, because Microsoft was planning to discontinue supporting 
-                                the old GDI printer driver architecture going forward.
-
-                                We reached the milestones much earlier than the management anticipated, which was relieving
-                                because I could bid farewell to Japan without hurting the progress of the project.
+                                Our team was so young, passionate and agile, that we could bring it on track for release in only 9 months.
                             </p>
 
                             <h3 id='career-aus'>In Australia</h3>
 
                             <p>
-                                Soon after I moved to Melbourne, I found a job through a referral.
+                                After moving to Australia, my experience landed me a job quickly. 
 
-                                Despite being hired as an Embedded Software Engineer, I was asigned to develop a 
-                                <strong>React.js</strong> web interface for an upcoming, super complicated product.
-
-                                This was my first ever experience working with a JavaScript framework.
-                            </p>
-
-
-                            <p>
-                                I started learning about React.js from this point and I am still learning new things every day.
-
-                                The deeper I dug into React.js, I fell in love with it.
-
-                                For whatever reason, it felt more enjoyable to play around React.
-
-                                It's possibly because I always wanted to move into UI design, however I did not get the 
-                                opportunity to do that when I was working printer drivers.
-
-                                At my current work place, I have all the freedom to learn, experiment and innovate.
-                            </p>
-
-                            <p>
-                                <em>And it's official: I want to become a web developer.</em>
+                                However, these days I am working on a completely different field. 
+                                
+                                I am developing a web product. 
+                                
+                                It's a <strong>React.js</strong> web UI for a smart embedded comtroller.
                             </p>
                         </div>
-                        <div class="col-lg-2"></div>
 
                     </div>                                
 
                 </div>
 
-            </section>
-
+            </section>            
+            
             <section id="resume">
 
                 <div class="container-fluid">
 
-                    <div class="row animate-row" id="resume">
+                    <div class="row" id="resume">
 
-                        <div class="col-lg-2"></div>
-                        <div class="col-lg-8">
+                        <div class="col-md-8 col-md-offset-2">
 
                             <h2>
                                 <i class="fa fa-file-text-o" aria-hidden="true"></i>
@@ -256,7 +206,6 @@
                             </p>
 
                         </div>
-                        <div class="col-lg-2"></div>
 
                     </div>
 
@@ -264,15 +213,13 @@
 
             </section>
 
-
             <section id="contact">
 
                 <div class="container-fluid">    
 
-                    <div class="row animate-row" >
+                    <div class="row" >
 
-                        <div class="col-lg-2"></div>
-                        <div class="col-lg-8">
+                        <div class="col-md-8 col-md-offset-2">
 
                             <h2>
                                   <i class="fa fa-envelope-o" aria-hidden="true"></i>
@@ -309,7 +256,6 @@
                             </div>
 
                         </div>
-                        <div class="col-lg-2"></div>
 
                     </div>
 
@@ -322,7 +268,7 @@
         
         <footer class="footer">
             <div class="container-fluid">
-                <div class="row animate-row">
+                <div class="row">
                     <div class="col-md-6">
                         <ul class="list-inline social">
                             <li>

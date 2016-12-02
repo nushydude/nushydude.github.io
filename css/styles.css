@@ -11,7 +11,7 @@ font-family: 'Montserrat', sans-serif;
 
 
 body {
-    background: rgb(240, 240, 240);
+    background: #f0f0f0;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 1.5;
@@ -45,27 +45,41 @@ nav a {
     font-weight: 700;
 }
 
+.navbar-brand img {
+    height: 50px;
+    margin-top: -20px;
+}
+
+
+
+#banner {
+    background: #c8c8c8 url(../img/banner3.jpg) center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+}
+
+#banner a {
+    position: relative;
+    width: 100px;
+    bottom: 20px;
+    display: none;
+}
+
 /*********************** profile ***********************/
 
 
 #profile {
     text-align: center;
-    background: #c8c8c8 url(../img/banner2.jpg) center center no-repeat;
-    background-size: cover;
-    color: white;
-    text-shadow: 2px 2px 5px black;
+    color: #444;
 }
 
-#profile img {
+#profile-img {
     width: 150px;
-    border-radius: 50%;
 }
 
-#profile h2 {
-    color: white;
-    text-shadow: 2px 2px 5px black;  
-}
 
+/*********************** profile ***********************/
 
 
 #content section:nth-child(odd) {
