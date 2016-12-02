@@ -121,5 +121,28 @@ footer a:hover {
     line-height: 30px;
 }
 
+a {
+    color: orange;
+}
+
+section a:link {
+    color: #e78200;
+    text-decoration: none;
+}
+
+section a:visited {
+    color: #e78200;
+    text-decoration: none;
+}
+
+section a:hover {
+    color: #b57726;
+}
+
+section a:active {
+    color: #b57726;
+    position: relative;
+    top: 1px;
+}
 
 
