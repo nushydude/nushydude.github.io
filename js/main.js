@@ -71,7 +71,8 @@ $(document).ready(function() {
     
     
     // Add smooth scrolling on all links inside the navbar
-    $("#myNavbar a").on('click', function(e) {
+    $("#myNavbar a, #navbar-brand, #contact a").on('click', function(e) {
+        console.log(this.hash);
       if (this.hash !== "") {
         e.preventDefault();
         var hash = this.hash;

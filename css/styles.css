@@ -71,9 +71,8 @@ nav.navbar-inverse {
 }
 
 
-.navbar-brand img {
+#navbar-brand img {
     height: 50px;
-    margin-top: -20px;
 }
 
 
@@ -123,7 +122,9 @@ section {
 
 
 section:nth-child(odd) {
-    background-color: #dfdfdf;    
+    background-color: #e6e6e6;
+    border-top: 1px solid #cecece;
+    border-bottom: 1px solid #cecece;
 }
 
 
@@ -202,11 +203,7 @@ section a:active {
 
 @media(min-width:768px){}
 
-@media(min-width:992px){
-    section {
-        min-height: 1000px;
-    }
-}
+@media(min-width:992px){}
 
 
 @media(min-width:1200px){}
