@@ -1,330 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Anusha Dharmasena</title>
+    <link rel='shortcut icon' href='app/assets/images/favicon.ico' type='image/x-icon'>
+    <link href="app/temp/styles/styles.css" rel="stylesheet">
+  </head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <body data-spy="scroll" data-target=".navbar" data-offset="100">
 
-        <link rel='shortcut icon' href='app/assets/images/favicon.ico' type='image/x-icon'>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="navbar-brand" href="#cover">
+            <img alt="CDAND" src="app/assets/images/logo.png"/>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about-me">About me</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-        <title>Anusha Dharmasena</title>
+    <section id="cover">
+      <!--
+      <div class="cover-text">
+          <a class="btn btn-danger btn-large" href="#about-me">
+              <span class="glyphicon glyphicon-chevron-down"></span>
+          </a>
+      </div>
+      -->
+    </section>
 
-        <link href="app/temp/styles/styles.css" rel="stylesheet">
-    </head>
+    <section id="about-me">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h1>
+              <i class="fa fa-user" aria-hidden="true"></i>
+              About me
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 col-md-offset-2" id="profile">
+            <img src="app/assets/images/profile.jpg" id="profile-img" class="img-circle" alt="Profile Pic"/>
+            <h3>Anusha<br>Dharmasena</h3>
+            <p>Software Engineer</p>
+            <ul id="profile-links">
+              <li>
+                <a href="https://au.linkedin.com/in/cdandharmasena" target="_blank">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/nushydude" target="_blank">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <p>
+              I am a Software Engineer from Sri Lanka currently based in Melbourne. I used to work on software projects involving low-level languages like drivers and rendering engines, but recently I have grown a passion for web development.
+            </p>
+            <p>
+              I am a PC gamer and I love playing first person shooters. If someone asked what my hobby was, I used to say <em>PC Gaming</em>. I really loved Crysis 3. In my spare time, I write a <a href="http://www.anushand.com" target="_blank">blog</a> as well.
+            </p>
+            <p>
+              However, as a result of my passion for web development, I've found a new <em>main</em> hobby: learning web!
+            </p>
+          </div>
+        </div>
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="100">
+      </div>
+    </section>
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+    <section id="career">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h1>
+              <i class="fa fa-briefcase" aria-hidden="true"></i>
+              Career
+            </h1>
+            <h2>In Sri Lanka</h2>
+            <p>
+              After finishing university, I joined a software firm with its HQ in Japan.
+              I learned Japanese and worked on Web Applications during my 2 year span there.
+            </p>
+            <h2>In Japan</h2>
+            <p>
+              Next I got the opportunity to work at the HQ in Tokyo.Initially I was assigned to printer driver projects that were in maintenance phases.
+            </p>
+            <p>
+              In about three years, I got the chance to develop a new product in a completely new league for Canon. Internally it was called "The <abbr title="Scalable Vector Graphics">SVG</abbr> project". The goal was to build a PDF to SVG converter - conforming to very, very strict regulations, and it was a critical component in a new philosophical move. It was my first <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)" target="_blank">Agile Scrum</a> project. The phase 1 was a success; however, I was pulled out of phase 2 to work on the V4 project which was in a critical condition.
+            </p>
+            <p>
+              The goal of the <a href="https://msdn.microsoft.com/en-us/windows/hardware/drivers/print/v4-printer-driver" target="_blank">
+              Windows V4 Printer Driver</a> project was to port features of the to-be-phased-out V3 driver. Microsoft had a deadline in place, and the project needed a lot of work to meet it. Our team was so young, passionate and agile, that we could bring the project on track for release in only 9 months.
+            </p>
+            <h2 id='career-aus'>In Australia</h2>
+            <p>
+              After moving to Australia, my experience in Japan landed me a job quickly. However, these days I am working on a project that's in a completely different field. I am developing a web front-end in React.js for a new product.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="container-fluid">
-                  <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                              <span class="sr-only">Toggle navigation</span>
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                        </button>
-                        <a id="navbar-brand" href="#cover">
-                            <img alt="CDAND" src="app/assets/images/logo.png"/>
-                        </a>
-                  </div>
-                  <div class="collapse navbar-collapse" id="myNavbar">
-                        <ul class="nav navbar-nav navbar-right">
-                              <li><a href="#about-me">About me</a></li>
-                              <li><a href="#career">Career</a></li>
-                              <li><a href="#resume">Resume</a></li>
-                              <li><a href="#contact">Contact me</a></li>
-                        </ul>
-                  </div>
+    <section id="resume">
+      <div class="container-fluid">
+        <div class="row" id="resume">
+          <div class="col-md-8 col-md-offset-2">
+            <h1>
+              <i class="fa fa-file-text-o" aria-hidden="true"></i>
+              Resume
+            </h1>
+            <p>
+              A PDF version of my resume can be downloaded by clicking the button below.
+            </p>
+            <p>
+              <button onclick="location.href='app/assets/files/AnushaDharmasena-Resume-2016.pdf';" class="btn btn-danger btn-lg" role="button">
+                <span class="glyphicon glyphicon-download"></span>&nbsp;Download
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container-fluid">
+        <div class="row" >
+          <div class="col-md-8 col-md-offset-2">
+            <h1>
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              Contact me
+            </h1>
+            <p>
+              You can either use the following form to sent me a message or you can connect with me using the social media handles provided in the <a href="#main-footer">footer</a>.
+            </p>
+            <div class="col-xs-12 col-sm-10 col-md-8" id="contact-form">
+              <form action="https://formspree.io/nushydude@gmail.com" method="POST">
+                <div class="form-group">
+                  <input id="frm-name" type="text" name="name" placeholder="name" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input id="frm-email" type="email" name="email" placeholder="email"  class="form-control">
+                </div>
+                <div class="form-group">
+                  <textarea id="frm-message" name="message" placeholder="message"  class="form-control" rows="8"></textarea>
+                </div>
+                <div class="form-group">
+                  <input id="frm-submit" class="btn btn-danger btn-lg" type="submit" value="Send message" disabled='true'>
+                </div>
+              </form>
             </div>
-        </nav>
-
-            <section id="cover">
-                <!--
-                <div class="cover-text">
-                    <a class="btn btn-danger btn-large" href="#about-me">
-                        <span class="glyphicon glyphicon-chevron-down"></span>
-                    </a>
-                </div>
-                -->
-            </section>
-
-            <section id="about-me">
-
-                <div class="container-fluid">
-
-                    <div class="row">
-
-                        <div class="col-md-8 col-md-offset-2">
-                            <h1>
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                About me
-                            </h1>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-md-2 col-md-offset-2" id="profile">
-                            <img src="app/assets/images/profile.jpg" id="profile-img" class="img-circle" alt="Profile Pic"/>
-                            <h3>Anusha<br>Dharmasena</h3>
-                            <p>Software Engineer</p>
-                            <ul id="profile-links">
-                                <li>
-                                    <a href="https://au.linkedin.com/in/cdandharmasena" target="_blank">
-                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/nushydude" target="_blank">
-                                    <i class="fa fa-github" aria-hidden="true"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="col-md-6">
-                            <p>
-                                I am a Software Engineer from Sri Lanka currently based in Melbourne.
-
-                                I used to work on software projects involving low-level languages like drivers and rendering engines,
-                                but recently I have grown a passion for web development.
-                            </p>
-                            <p>
-                                I am a PC gamer and I love playing first person shooters. If someone asked what my hobby was, I used to say <em>PC Gaming</em>. I really loved Crysis 3. In my spare time, I write a <a href="http://www.anushand.com" target="_blank">blog</a> as well.
-                            </p>
-                            <p>
-                                However, as a result of my passion for web development, I've found a new <em>main</em> hobby: learning web!
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section id="career">
-
-                <div class="container-fluid">
-
-                    <div class="row">
-
-                        <div class="col-md-8 col-md-offset-2">
-                            <h1>
-                                  <i class="fa fa-briefcase" aria-hidden="true"></i>
-                                  Career
-                            </h1>
-
-                            <h2>In Sri Lanka</h2>
-
-                            <p>
-                                After finishing university, I joined a software firm with its HQ in Japan.
-
-                                I learned Japanese and worked on Web Applications during my 2 year span there.
-                            </p>
-
-                            <h2>In Japan</h2>
-
-                            <p>
-                                Next I got the opportunity to work at the HQ in Tokyo.
-
-                                Initially I was assigned to printer driver projects that were in maintenance phases.
-                            </p>
-
-                            <p>
-                                In about three years, I got the chance to develop a new product in a completely new league for Canon.
-
-                                Internally it was called "The <abbr title="Scalable Vector Graphics">SVG</abbr> project".
-
-                                The goal was to build a PDF to SVG converter - conforming to very, very strict regulations, and it was a critical component in a new philosophical move.
-
-                                It was my first <a href="https://en.wikipedia.org/wiki/Scrum_(software_development)" target="_blank">Agile Scrum</a> project.
-
-                                The phase 1 was a success; however, I was pulled out of phase 2 to work on the V4 project which was in a critical condition.
-                            </p>
-
-                            <p>
-                                The goal of the <a href="https://msdn.microsoft.com/en-us/windows/hardware/drivers/print/v4-printer-driver" target="_blank">
-                                Windows V4 Printer Driver</a> project was to port features of the to-be-phased-out V3 driver.
-
-                                Microsoft had a deadline in place, and the project needed a lot of work to meet it.
-
-                                Our team was so young, passionate and agile, that we could bring the project on track for release in only 9 months.
-                            </p>
-
-                            <h2 id='career-aus'>In Australia</h2>
-
-                            <p>
-                                After moving to Australia, my experience in Japan landed me a job quickly.
-
-                                However, these days I am working on a project that's in a completely different field.
-
-                                I am developing a web front-end in React.js for a new product.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section id="resume">
-
-                <div class="container-fluid">
-
-                    <div class="row" id="resume">
-
-                        <div class="col-md-8 col-md-offset-2">
-
-                            <h1>
-                                <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                Resume
-                            </h1>
-
-                            <p>
-                                A PDF version of my resume can be downloaded by clicking the button below.
-                            </p>
-
-                            <p>
-                                <button onclick="location.href='app/assets/files/AnushaDharmasena-Resume-2016.pdf';" class="btn btn-danger btn-lg" role="button">
-                                    <span class="glyphicon glyphicon-download"></span>&nbsp;Download
-                                </button>
-                            </p>
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section id="contact">
-
-                <div class="container-fluid">
-
-                    <div class="row" >
-
-                        <div class="col-md-8 col-md-offset-2">
-
-                            <h1>
-                                  <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                                  Contact me
-                            </h1>
-
-                            <p>
-                                You can either use the following form to sent me a message or you can connect with me using the social media handles provided in the <a href="#main-footer">footer</a>.
-                            </p>
-
-
-                            <div class="col-xs-12 col-sm-10 col-md-8" id="contact-form">
-
-                                <form action="https://formspree.io/nushydude@gmail.com" method="POST">
-
-                                    <div class="form-group">
-                                        <input id="frm-name" type="text" name="name" placeholder="name" class="form-control">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input id="frm-email" type="email" name="email" placeholder="email"  class="form-control">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <textarea id="frm-message" name="message" placeholder="message"  class="form-control" rows="8"></textarea>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input id="frm-submit" class="btn btn-danger btn-lg" type="submit" value="Send message" disabled='true'>
-                                    </div>
-
-                                </form>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-
-        <footer id="main-footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6">
-                        <ul class="list-inline social">
-                            <li>
-                                <a href="https://au.linkedin.com/in/cdandharmasena" target="_blank">
-                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/nushydude" target="_blank">
-                                <i class="fa fa-github" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/anushand" target="_blank">
-                                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.youtube.com/user/nushydyde/videos?flow=grid&view=1" target="_blank">
-                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.facebook.com/anushand" target="_blank">
-                                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://plus.google.com/u/0/+AnushaDharmasena" target="_blank">
-                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <p id="tm">&copy; 2016 - Anusha Dharmasena</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-
-
-        <!-- Scripts  -->
-        <!-- TODO: Migrate to NPM JS modules -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="app/vendor/jquery.min.js"><\/script>')</script>
-
-        <script src="app/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-
-        <script src="app/assets/js/index.js"></script>
-
-
-        <!-- Google Analytics
-        ================================================== -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-86303616-1', 'auto');
-          ga('send', 'pageview');
-        </script>
-
-    </body>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="main-footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="list-inline social">
+              <li>
+                <a href="https://au.linkedin.com/in/cdandharmasena" target="_blank">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/nushydude" target="_blank">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/anushand" target="_blank">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/nushydyde/videos?flow=grid&view=1" target="_blank">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/anushand" target="_blank">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://plus.google.com/u/0/+AnushaDharmasena" target="_blank">
+                  <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <p id="tm">&copy; 2016 - Anusha Dharmasena</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts  -->
+    <!-- TODO: Migrate to NPM JS modules -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="app/vendor/jquery.min.js"><\/script>')</script>
+    <script src="app/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="app/assets/js/index.js"></script>
+
+    <!-- Google Analytics
+    ================================================== -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-86303616-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </body>
 </html>
