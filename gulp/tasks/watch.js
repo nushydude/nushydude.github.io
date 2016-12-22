@@ -16,6 +16,8 @@ gulp.task('watch', function() {
     }
   });
 
+  gulp.start('fonts');
+
   // whenever a change to the index.html is detected
   watch('./index.html', function() {
     // automatically reload the webpage
