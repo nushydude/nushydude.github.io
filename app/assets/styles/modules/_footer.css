@@ -1,0 +1,26 @@
+#main-footer {
+  background-color: #333;
+
+  .social {
+    font-size: 30px;
+    text-align: center;
+
+    li {
+        margin: 0 5px;
+    }
+
+    a:link, a:visited, #tm {
+        color: #ddd;
+    }
+
+    a:hover {
+        color: #888;
+    }
+
+  }
+}
+
+#tm {
+    text-align: center;
+    line-height: 30px;
+}

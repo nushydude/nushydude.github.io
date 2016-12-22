@@ -1,0 +1,7 @@
+nav.navbar-inverse {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+#navbar-brand img {
+    height: 50px;
+}

@@ -1,0 +1,14 @@
+#cover {
+  background: #c8c8c8 url(../../assets/images/banner3.jpg) bottom right no-repeat;
+  background-size: cover;
+  display: table;
+  width: 100%;
+  padding: 0 20%;
+  box-shadow: inset 0 0 200px #000;
+
+  .cover-text {
+      text-align: center;
+      display: none;
+      vertical-align: middle;
+  }
+}
