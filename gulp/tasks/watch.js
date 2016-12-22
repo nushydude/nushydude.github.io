@@ -17,7 +17,7 @@ gulp.task('watch', function() {
   });
 
   // whenever a change to the index.html is detected
-  watch('./app/index.html', function() {
+  watch('./index.html', function() {
     // automatically reload the webpage
     browserSync.reload();
   });
