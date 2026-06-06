@@ -2,6 +2,7 @@
 title: Fiscava
 summary: Personal finance software that grew out of expense tracking into a broader product for clearer money decisions.
 featured: true
+flagship: true
 status: active
 role: Founder, product builder, and engineer
 stack:
@@ -14,7 +15,18 @@ tags:
   - product
   - side-project
 yearStart: 2025
+sortOrder: 100
 coverImage: /images/projects/fiscava-card.svg
+heroImage:
+  src: /images/projects/fiscava/active-sessions-desktop.png
+  alt: Fiscava desktop view showing active sessions management in the product UI.
+gallery:
+  - src: /images/projects/fiscava/active-sessions-desktop.png
+    alt: Fiscava desktop screenshot showing active sessions.
+    caption: Desktop UI snapshot from the Fiscava repo's visual review artifacts.
+  - src: /images/projects/fiscava/chat-context-desktop.png
+    alt: Fiscava desktop screenshot showing chat context inside the app.
+    caption: A second captured flow from automated UI review work in the repo.
 links:
   live: https://fiscava.app
 ---
@@ -22,6 +34,8 @@ links:
 ## Overview
 
 Fiscava started from a simple frustration: plenty of finance apps are good at collecting transactions, but far fewer are good at helping someone make sense of their money.
+
+It is the flagship personal app in this portfolio because it sits closest to the overlap I care about most: product judgement, interface clarity, and software that helps with real decisions rather than just storing more data.
 
 ## Problem
 
@@ -37,4 +51,4 @@ The challenge is product judgement. A finance app can become bloated very quickl
 
 ## What still belongs here
 
-This page still needs launch-quality screenshots, a cleaner timeline showing how ExpenseFlow became Fiscava, and a more concrete explanation of the architecture behind the current product shape.
+Next step: replace the current repo-captured images with a fuller set of polished product screenshots, add a cleaner timeline showing how ExpenseFlow became Fiscava, and explain the architecture behind the current product shape in more concrete terms.

@@ -23,12 +23,20 @@ const projectLinks = project.data.links
       project.data.links.appStore ? { href: project.data.links.appStore, label: 'App store' } : null,
     ].filter(Boolean)
   : [];
+const heroImage = project.data.heroImage ?? (project.data.coverImage
+  ? {
+      src: project.data.coverImage,
+      alt: `Visual preview for ${project.data.title}`,
+    }
+  : null);
 ---
 
 <BaseLayout title={project.data.title} description={project.data.summary}>
   <article class="mx-auto max-w-5xl px-6 pb-10 pt-16 md:pb-14 md:pt-24">
-    <div class="surface-card-strong rounded-[2rem] p-8 md:p-10">
-      <p class="section-label">{project.data.status}</p>
+    <a href="/projects/" class="mb-6 inline-flex text-sm font-medium text-sky-300 hover:text-sky-200">← Back to projects</a>
+
+    <div class={`rounded-[2rem] p-8 md:p-10 ${project.data.flagship ? 'surface-card-strong border border-sky-300/18' : 'surface-card-strong'}`}>
+      <p class="section-label">{project.data.flagship ? 'Flagship app' : project.data.status}</p>
       <h1 class="mt-4 text-5xl font-semibold tracking-[-0.06em] text-white md:text-7xl md:leading-[0.96]">{project.data.title}</h1>
       <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">{project.data.summary}</p>
       <div class="mt-8 flex flex-wrap gap-3 text-sm text-slate-300">
@@ -46,9 +54,9 @@ const projectLinks = project.data.links
     </div>
 
     <div class="surface-card mt-8 overflow-hidden rounded-[2rem]">
-      {project.data.coverImage ? (
+      {heroImage ? (
         <div class="border-b border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.14),_transparent_40%),linear-gradient(135deg,rgba(15,23,42,0.96),rgba(15,23,42,0.72))] p-4 md:p-6">
-          <img src={project.data.coverImage} alt={`Visual preview for ${project.data.title}`} class="w-full rounded-[1.5rem] border border-white/10" />
+          <img src={heroImage.src} alt={heroImage.alt} class="w-full rounded-[1.5rem] border border-white/10" />
         </div>
       ) : (
         <div class="border-b border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.14),_transparent_40%),linear-gradient(135deg,rgba(15,23,42,0.96),rgba(15,23,42,0.72))] p-8 md:p-10">
@@ -67,6 +75,23 @@ const projectLinks = project.data.links
             </div>
           </div>
         </div>
+      )}
+
+      {project.data.gallery.length > 0 && (
+        <section class="border-b border-white/10 px-8 py-8 md:px-10 md:py-10">
+          <div class="mb-6">
+            <p class="section-label">App visuals</p>
+            <h2 class="mt-4 text-2xl font-semibold tracking-[-0.04em] text-white md:text-3xl">Screens, renders, and product views</h2>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2">
+            {project.data.gallery.map((image) => (
+              <figure class="surface-card overflow-hidden rounded-[1.5rem] p-3">
+                <img src={image.src} alt={image.alt} class="w-full rounded-[1rem] border border-white/10 bg-slate-950/60" />
+                {image.caption && <figcaption class="px-2 pt-4 text-sm leading-7 text-slate-400">{image.caption}</figcaption>}
+              </figure>
+            ))}
+          </div>
+        </section>
       )}
 
       <div class="p-8 md:p-10">

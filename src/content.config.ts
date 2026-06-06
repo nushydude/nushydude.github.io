@@ -23,12 +23,14 @@ const projects = defineCollection({
     title: z.string(),
     summary: z.string(),
     featured: z.boolean().default(false),
+    flagship: z.boolean().default(false),
     status: z.enum(['active', 'maintained', 'archived', 'client-work']),
     role: z.string(),
     stack: z.array(z.string()).default([]),
     tags: z.array(z.string()).default([]),
     yearStart: z.number(),
     yearEnd: z.number().optional(),
+    sortOrder: z.number().default(0),
     links: z
       .object({
         live: z.string().url().optional(),
@@ -38,6 +40,21 @@ const projects = defineCollection({
       })
       .optional(),
     coverImage: z.string().optional(),
+    heroImage: z
+      .object({
+        src: z.string(),
+        alt: z.string(),
+      })
+      .optional(),
+    gallery: z
+      .array(
+        z.object({
+          src: z.string(),
+          alt: z.string(),
+          caption: z.string().optional(),
+        }),
+      )
+      .default([]),
     ogImage: z.string().optional(),
     draft: z.boolean().default(false),
   }),

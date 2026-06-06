@@ -1,0 +1,33 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="960" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08111F"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1340 190) rotate(132) scale(500 340)">
+      <stop stop-color="#FB7185" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="960" rx="42" fill="url(#bg)"/>
+  <rect width="1600" height="960" rx="42" fill="url(#glow)"/>
+  <rect x="84" y="108" width="1432" height="744" rx="30" fill="rgba(15,23,42,0.84)" stroke="rgba(251,113,133,0.2)"/>
+  <text x="132" y="178" fill="#FDA4AF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="5">QUICK FILMSTRIP</text>
+  <text x="132" y="234" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="700">Move through a folder without waiting for the app to catch up.</text>
+  <rect x="132" y="292" width="1336" height="410" rx="28" fill="rgba(255,255,255,0.03)" stroke="rgba(148,163,184,0.14)"/>
+  <rect x="182" y="342" width="900" height="310" rx="24" fill="rgba(255,255,255,0.04)"/>
+  <path d="M238 592L364 454L486 560L640 402L818 592H238Z" fill="rgba(248,250,252,0.24)"/>
+  <circle cx="864" cy="428" r="72" fill="rgba(249,115,22,0.18)"/>
+  <rect x="1118" y="342" width="290" height="310" rx="24" fill="rgba(2,6,23,0.5)" stroke="rgba(148,163,184,0.12)"/>
+  <text x="1150" y="396" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">Viewer priorities</text>
+  <text x="1150" y="450" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="19">• instant open</text>
+  <text x="1150" y="492" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="19">• smooth next / previous</text>
+  <text x="1150" y="534" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="19">• minimal chrome</text>
+  <text x="1150" y="576" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="19">• keyboard-friendly controls</text>
+  <rect x="132" y="744" width="180" height="56" rx="20" fill="rgba(251,113,133,0.14)" stroke="rgba(251,113,133,0.24)"/>
+  <text x="188" y="779" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="22">LightFrame</text>
+  <rect x="336" y="744" width="112" height="56" rx="20" fill="rgba(255,255,255,0.05)"/>
+  <text x="375" y="779" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="22">⌘O</text>
+  <rect x="462" y="744" width="112" height="56" rx="20" fill="rgba(255,255,255,0.05)"/>
+  <text x="499" y="779" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="22">Space</text>
+</svg>

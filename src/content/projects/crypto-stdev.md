@@ -14,7 +14,18 @@ tags:
   - analytics
   - product
 yearStart: 2022
+sortOrder: 70
 coverImage: /images/projects/crypto-stdev-card.svg
+heroImage:
+  src: /images/projects/crypto-stdev/dashboard-desktop.png
+  alt: crypto-stdev dashboard showing portfolio and market context widgets.
+gallery:
+  - src: /images/projects/crypto-stdev/dashboard-desktop.png
+    alt: crypto-stdev desktop dashboard screenshot.
+    caption: Dashboard snapshot from Playwright visual test artifacts.
+  - src: /images/projects/crypto-stdev/best-dca-desktop.png
+    alt: crypto-stdev desktop screenshot showing the best DCA view.
+    caption: Best-DCA screen captured from automated visual tests.
 links:
   repo: https://github.com/nushydude/crypto-stdev
 ---
@@ -37,4 +48,4 @@ The hard part is product honesty. Data is easy to accumulate. Deciding which par
 
 ## What still belongs here
 
-This page still needs version-history notes, some architecture detail, and clearer examples of the metrics and alerts that ended up being genuinely useful.
+This page now has repo-captured product screens, but it still needs version-history notes, some architecture detail, and clearer examples of the metrics and alerts that ended up being genuinely useful.

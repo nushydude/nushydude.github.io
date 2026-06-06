@@ -14,7 +14,18 @@ tags:
   - desktop
   - imaging
 yearStart: 2026
+sortOrder: 60
 coverImage: /images/projects/lightframe-card.svg
+heroImage:
+  src: /images/projects/lightframe/workspace-view.svg
+  alt: LightFrame concept UI showing a desktop image viewer workspace.
+gallery:
+  - src: /images/projects/lightframe/workspace-view.svg
+    alt: LightFrame concept image showing the main workspace.
+    caption: A generated product mock to hold the place until captured app screenshots are available.
+  - src: /images/projects/lightframe/folder-strip.svg
+    alt: LightFrame concept image showing a fast folder browsing workflow.
+    caption: A second generated mock showing the folder and filmstrip interaction.
 links:
   repo: https://github.com/nushydude/lightframe
 ---
@@ -37,4 +48,4 @@ Small utilities still have real product decisions in them. Startup speed, folder
 
 ## What still belongs here
 
-This page still needs screenshots, packaging notes, and a tighter write-up of the trade-offs behind the viewer workflow and performance work.
+This page now has generated product mock-ups, but it still needs captured screenshots from the app itself, packaging notes, and a tighter write-up of the trade-offs behind the viewer workflow and performance work.

@@ -1,0 +1,56 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="960" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#040816"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0" y1="0" x2="0" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#18212F"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1250 180) rotate(134) scale(520 360)">
+      <stop stop-color="#F97316" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#F97316" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="960" rx="42" fill="url(#bg)"/>
+  <rect width="1600" height="960" rx="42" fill="url(#glow)"/>
+  <rect x="74" y="84" width="1452" height="792" rx="28" fill="url(#frame)" stroke="rgba(251,113,133,0.22)"/>
+  <rect x="74" y="84" width="1452" height="56" rx="28" fill="rgba(255,255,255,0.03)"/>
+  <circle cx="122" cy="112" r="8" fill="#FB7185"/>
+  <circle cx="148" cy="112" r="8" fill="#F59E0B"/>
+  <circle cx="174" cy="112" r="8" fill="#34D399"/>
+  <text x="726" y="118" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18">LightFrame</text>
+  <rect x="104" y="168" width="282" height="668" rx="24" fill="rgba(255,255,255,0.03)" stroke="rgba(148,163,184,0.14)"/>
+  <text x="136" y="216" fill="#FDA4AF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">LIBRARY</text>
+  <rect x="136" y="244" width="218" height="44" rx="16" fill="rgba(251,113,133,0.12)" stroke="rgba(251,113,133,0.22)"/>
+  <text x="158" y="272" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="18">Summer trip</text>
+  <rect x="136" y="304" width="218" height="44" rx="16" fill="rgba(255,255,255,0.03)"/>
+  <text x="158" y="332" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="18">Portraits</text>
+  <rect x="136" y="364" width="218" height="44" rx="16" fill="rgba(255,255,255,0.03)"/>
+  <text x="158" y="392" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="18">Edited exports</text>
+  <rect x="136" y="452" width="218" height="312" rx="20" fill="rgba(15,23,42,0.8)" stroke="rgba(148,163,184,0.1)"/>
+  <rect x="160" y="476" width="170" height="112" rx="16" fill="url(#canvas)"/>
+  <circle cx="248" cy="520" r="26" fill="rgba(251,113,133,0.18)"/>
+  <path d="M174 564L222 518L252 548L306 496L330 588H174V564Z" fill="rgba(248,250,252,0.28)"/>
+  <text x="160" y="630" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="18">Current folder</text>
+  <text x="160" y="662" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="16">413 images · keyboard-first navigation</text>
+  <rect x="424" y="168" width="1018" height="668" rx="28" fill="rgba(255,255,255,0.03)" stroke="rgba(148,163,184,0.12)"/>
+  <rect x="456" y="200" width="954" height="56" rx="20" fill="rgba(255,255,255,0.03)"/>
+  <rect x="488" y="216" width="120" height="24" rx="12" fill="rgba(255,255,255,0.08)"/>
+  <rect x="1114" y="214" width="72" height="28" rx="14" fill="rgba(255,255,255,0.06)"/>
+  <rect x="1200" y="214" width="72" height="28" rx="14" fill="rgba(255,255,255,0.06)"/>
+  <rect x="1286" y="214" width="92" height="28" rx="14" fill="rgba(251,113,133,0.14)" stroke="rgba(251,113,133,0.26)"/>
+  <rect x="488" y="288" width="890" height="500" rx="24" fill="url(#canvas)"/>
+  <circle cx="1160" cy="404" r="92" fill="rgba(249,115,22,0.16)"/>
+  <path d="M582 694L780 470L934 596L1096 410L1284 694H582Z" fill="rgba(248,250,252,0.2)"/>
+  <path d="M582 694L704 564L808 650L962 494L1128 694H582Z" fill="rgba(148,163,184,0.35)"/>
+  <rect x="1180" y="312" width="150" height="40" rx="18" fill="rgba(15,23,42,0.6)" stroke="rgba(148,163,184,0.16)"/>
+  <text x="1214" y="338" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="18">100%</text>
+  <rect x="1168" y="736" width="170" height="24" rx="12" fill="rgba(15,23,42,0.76)"/>
+  <text x="1210" y="752" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="16">Fast, clean viewer</text>
+</svg>
