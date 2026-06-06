@@ -33,16 +33,26 @@ links:
 
 ## Overview
 
-LightFrame is the kind of utility project I like because the value proposition is immediate: open images quickly, move through them smoothly, and get out of the way.
+LightFrame is a fast desktop image viewer for Windows, built with Tauri, React, and Rust. It exists for a simple reason: the usual ways to open and move through images are often slow, cluttered, or oddly awkward for something people do constantly. It is open source, so anyone can use it or contribute.
 
 ## Why it exists
 
-Default image viewers are often slow, cluttered, or oddly awkward for something people use all the time. LightFrame came from wanting something faster and more focused.
+I wanted something that opens instantly, moves through a folder smoothly, and otherwise gets out of the way — a viewer that feels lightweight rather than like a media-management suite.
 
-## What I built
+## What it does
 
-The app combines a Tauri desktop shell with a React front end and Rust-backed filesystem work. The focus is responsiveness, keyboard-friendly navigation, and a viewing experience that feels lightweight instead of bloated.
+- **Fast, keyboard-first viewing.** Quick startup and smooth movement through a folder, with the keyboard as a first-class way to navigate, zoom, and sort.
+- **Built for real photo triage.** Recent versions added Windows native previews, saved review presets, and curation-aware sorting — aimed at actually going through and culling a folder of images, not just looking at one.
+- **Maintenance built in.** Health and cache maintenance so the app stays fast as libraries grow.
 
-## What makes it interesting
+## Architecture
 
-Small utilities still have real product decisions in them. Startup speed, folder behaviour, zooming, and the feel of navigation matter more here than a long feature list.
+A Tauri shell wraps a React front end over Rust-backed filesystem work. That split keeps the UI responsive while pushing the heavier file and image handling into Rust, which is where the speed comes from. It ships as a Windows installer through GitHub Releases.
+
+## Why it's interesting
+
+Small utilities still have real product decisions in them. Startup speed, how folder navigation feels, how zoom behaves, and how sorting and triage work matter far more here than a long feature list — and they are exactly the things a generic viewer tends to get wrong.
+
+## Status
+
+Actively released (currently v7.11) as a public, open-source Windows app, with installers on the GitHub Releases page. The images above are concept mock-ups standing in until captured app screenshots are added.

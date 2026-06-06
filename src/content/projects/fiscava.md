@@ -8,8 +8,9 @@ role: Founder, product builder, and engineer
 stack:
   - TypeScript
   - React
-  - Node.js
-  - Product design
+  - Express
+  - MongoDB
+  - PWA
 tags:
   - finance
   - product
@@ -33,18 +34,34 @@ links:
 
 ## Overview
 
-Fiscava started from a simple frustration: plenty of finance apps are good at collecting transactions, but far fewer are good at helping someone make sense of their money.
+Fiscava grew out of an earlier app of mine called ExpenseFlow, and it has become the most complete thing in this portfolio: a personal-finance product that goes well past expense tracking into a single, decision-oriented view of someone's money. It covers expenses and income, recurring bills, net worth and a full balance sheet, investment portfolios, debt-payoff planning, savings goals, multi-currency, spending forecasts, and an AI advisor that answers real questions about your finances.
 
-It is the flagship personal app in this portfolio because it sits closest to the overlap I care about most: product judgement, interface clarity, and software that helps with real decisions rather than just storing more data.
+It is the flagship app here because it sits exactly where I like to work — serious engineering in service of a product that has to stay clear and trustworthy under daily use. It is a Progressive Web App, currently past version 7, and the project I have put the most sustained product and engineering judgement into.
 
-## Problem
+## The problem
 
-Expense tracking is easy to start and easy to outgrow. The harder problem is turning raw activity into something legible enough to support decisions. That means less obsession with data capture for its own sake, and more attention to the way people actually think about budgeting, trade-offs, and progress.
+Most finance apps are good at capture and weak at clarity. They will happily store thousands of transactions and still leave you unsure whether you can afford something, whether a subscription quietly crept up, or where you actually stand this month.
 
-## What I built
+Fiscava is built around that gap. The goal is less "log everything" and more "help me see my situation clearly enough to make a decision" — and never show a number I can't trust.
 
-I have treated Fiscava as a product first. The work has included modelling the core data, shaping the interface, cutting features that looked clever but added noise, and gradually moving the product beyond a narrow tracker mindset.
+## What it does
 
-## What makes it interesting
+- **Tracking that doesn't fight you.** Expenses and income with searchable categories, stores, and payment methods, plus natural-language entry — "$50 on groceries at Aldi yesterday" parses into a structured, confidence-scored transaction.
+- **Insights and forecasts.** Category and trend analysis, a cashflow calendar, and a spending forecast that blends weighted history, fixed recurring commitments, seasonality, and outlier detection to project forward rather than just report the past.
+- **Net worth and investments.** A real balance sheet of assets and liabilities, plus investment portfolios with live pricing, allocation, and performance that feed straight into net worth.
+- **Debt and savings planning.** A payoff planner with avalanche, snowball, and hybrid strategies, and savings goals with payday and balance-sweep automation rules.
+- **Ask Fiscava.** An AI advisor for questions like "can I afford this?" It works out the affordability maths deterministically from your income, debt, and cash flow first, then uses retrieval over your own records so the answer is grounded in real data, not a guess. Bring-your-own-key, OpenAI or Claude, with keys encrypted at rest.
+- **Smart actions.** A ranked feed of the next useful thing to do — pay an overdue bill, review a likely duplicate, confirm an import, acknowledge a milestone.
+- **Imports.** CSV/OFX import that auto-detects your bank by fingerprinting the file header, with duplicate review and transfer detection.
 
-The challenge is product judgement. A finance app can become bloated very quickly. The job is deciding what deserves to be first-class, what can wait, and what should never be built at all.
+## Architecture and engineering
+
+Fiscava is a TypeScript monorepo: a React 19 + Vite front end, an Express + MongoDB API, a shared types package, and a small CLI. The web app uses TanStack Query for data, Zustand for local state, and Tailwind, and it ships as a PWA with offline, queue-first writes so you can add an expense with no connection and have it sync later.
+
+The part I am most proud of is the v7 financial engine. Every money-changing operation — create an expense, record a transfer, complete a recurring payment, delete any of them — runs through versioned "event contracts" with idempotency keys and compensating reversals, backed by a recompute-and-replay subsystem with snapshots. Deletes correctly unwind their effects on balances, goals, and debts; retries are safe; and the whole financial state can be rebuilt deterministically. It is gated behind feature flags and parity-tested across code paths.
+
+That rigour runs through the rest of the app: auditable point-in-time exchange-rate snapshots for multi-currency, anti-double-counting rules so transfers and card payments don't inflate totals, and a heavy governance layer — architecture decision records, custom lint rules, layout contracts, and the Playwright visual-regression system that produced the screenshots above.
+
+## Status
+
+Actively developed, past version 7, with a freemium model and the full product surface above running in production.

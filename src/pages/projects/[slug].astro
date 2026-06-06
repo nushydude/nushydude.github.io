@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ScreenshotCarousel from '../../components/projects/ScreenshotCarousel.astro';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects', ({ data }) => !data.draft);
@@ -32,6 +33,21 @@ const heroImage = project.data.heroImage ?? (project.data.coverImage
   : null);
 const ogCandidate = project.data.ogImage ?? project.data.heroImage?.src ?? project.data.coverImage;
 const ogImage = ogCandidate && !ogCandidate.endsWith('.svg') ? ogCandidate : undefined;
+
+// Build a de-duplicated screenshot list for the carousel (hero first, then gallery).
+const screenshotMap = new Map<string, { src: string; alt: string; caption?: string }>();
+if (heroImage) {
+  screenshotMap.set(heroImage.src, { src: heroImage.src, alt: heroImage.alt });
+}
+for (const image of project.data.gallery) {
+  const existing = screenshotMap.get(image.src);
+  if (existing) {
+    if (!existing.caption && image.caption) existing.caption = image.caption;
+  } else {
+    screenshotMap.set(image.src, { src: image.src, alt: image.alt, caption: image.caption });
+  }
+}
+const screenshots = [...screenshotMap.values()];
 ---
 
 <BaseLayout title={project.data.title} description={project.data.summary} image={ogImage} type="article">
@@ -57,44 +73,21 @@ const ogImage = ogCandidate && !ogCandidate.endsWith('.svg') ? ogCandidate : und
     </div>
 
     <div class="surface-card mt-8 overflow-hidden rounded-[2rem]">
-      {heroImage ? (
-        <div class="border-b border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.14),_transparent_40%),linear-gradient(135deg,rgba(15,23,42,0.96),rgba(15,23,42,0.72))] p-4 md:p-6">
-          <img src={heroImage.src} alt={heroImage.alt} decoding="async" class="w-full rounded-[1.5rem] border border-white/10" />
-        </div>
+      {screenshots.length > 0 ? (
+        <section class="border-b border-white/10 px-4 py-6 md:px-8 md:py-8">
+          <div class="mb-5 px-2 md:px-0">
+            <p class="section-label">App visuals</p>
+            <h2 class="mt-4 text-2xl font-semibold tracking-[-0.04em] text-white md:text-3xl">Screens and product views</h2>
+            <p class="mt-2 text-sm text-slate-400">Swipe or use the arrows — click any screen to view it full size.</p>
+          </div>
+          <ScreenshotCarousel images={screenshots} />
+        </section>
       ) : (
         <div class="border-b border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.14),_transparent_40%),linear-gradient(135deg,rgba(15,23,42,0.96),rgba(15,23,42,0.72))] p-8 md:p-10">
           <p class="text-xs font-semibold uppercase tracking-[0.24em] text-sky-300">Visual placeholder</p>
-          <div class="mt-5 grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-end">
-            <div>
-              <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Screenshot slot for {project.data.title}</h2>
-              <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">
-                Replace this panel with a real screenshot, product mock, or annotated UI once the visuals are ready. For now it
-                stops the page from feeling like a wall of text and marks the spot a case-study image should occupy.
-              </p>
-            </div>
-            <div class="grid gap-3 sm:grid-cols-2">
-              <div class="surface-card rounded-2xl p-4 text-sm leading-7 text-slate-300">Useful images here would usually show the main flow, the strongest product decision, or the constraint that shaped the build.</div>
-              <div class="surface-card rounded-2xl p-4 text-sm leading-7 text-slate-300">If no screenshot exists yet, a diagram or architecture slice is usually better than an empty space.</div>
-            </div>
-          </div>
+          <h2 class="mt-5 text-3xl font-semibold tracking-[-0.04em] text-white">Screenshots coming soon for {project.data.title}</h2>
+          <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">Product screens for this project will appear here.</p>
         </div>
-      )}
-
-      {project.data.gallery.length > 0 && (
-        <section class="border-b border-white/10 px-8 py-8 md:px-10 md:py-10">
-          <div class="mb-6">
-            <p class="section-label">App visuals</p>
-            <h2 class="mt-4 text-2xl font-semibold tracking-[-0.04em] text-white md:text-3xl">Screens, renders, and product views</h2>
-          </div>
-          <div class="grid gap-6 md:grid-cols-2">
-            {project.data.gallery.map((image) => (
-              <figure class="surface-card overflow-hidden rounded-[1.5rem] p-3">
-                <img src={image.src} alt={image.alt} loading="lazy" decoding="async" class="w-full rounded-[1rem] border border-white/10 bg-slate-950/60" />
-                {image.caption && <figcaption class="px-2 pt-4 text-sm leading-7 text-slate-400">{image.caption}</figcaption>}
-              </figure>
-            ))}
-          </div>
-        </section>
       )}
 
       <div class="p-8 md:p-10">

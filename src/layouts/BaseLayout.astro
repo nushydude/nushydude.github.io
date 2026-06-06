@@ -1,6 +1,7 @@
 ---
 import Header from '../components/site/Header.astro';
 import Footer from '../components/site/Footer.astro';
+import ScrollToTop from '../components/site/ScrollToTop.astro';
 import '../styles/global.css';
 import { site } from '../lib/site';
 
@@ -58,5 +59,6 @@ const ogImage = new URL(image, site.url).toString();
       </main>
       <Footer />
     </div>
+    <ScrollToTop />
   </body>
 </html>
