@@ -42,11 +42,9 @@ Once that is enabled, pushes to `master` will:
 - upload `dist/`
 - deploy to GitHub Pages
 
-## Launch notes
+## Notes
 
-- The Astro rebuild is the publish path.
-- Legacy static-site files still exist in the repo root and can be removed once you are happy there is nothing worth preserving from the old site.
-- The current remaining quality gap is mostly visual: a stronger profile photo and real project screenshots would lift the site noticeably.
+- The Astro build under `src/` is the only publish path; the old Bootstrap static site has been removed.
+- The main remaining quality gap is visual: a higher-resolution profile photo (the current one is 200×200) and real product screenshots for LightFrame would lift the site noticeably.
 - `vite@7.3.5` is pinned because a newer resolved Vite major broke the Tailwind integration during setup.
-
-See `docs/publish-checklist.md` for the final pre-launch checklist.
+- Default social/OG card lives at `public/images/og/og-default.svg`; regenerate the PNG with `sips -s format png public/images/og/og-default.svg --out public/images/og/og-default.png`.

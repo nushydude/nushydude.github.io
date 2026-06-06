@@ -18,15 +18,15 @@ yearStart: 2025
 sortOrder: 100
 coverImage: /images/projects/fiscava-card.svg
 heroImage:
-  src: /images/projects/fiscava/active-sessions-desktop.png
-  alt: Fiscava desktop view showing active sessions management in the product UI.
+  src: /images/projects/fiscava/dashboard.svg
+  alt: Fiscava dashboard mock-up showing net worth, savings rate, and spending insights with sample data.
 gallery:
-  - src: /images/projects/fiscava/active-sessions-desktop.png
-    alt: Fiscava desktop screenshot showing active sessions.
-    caption: Desktop UI snapshot from the Fiscava repo's visual review artifacts.
-  - src: /images/projects/fiscava/chat-context-desktop.png
-    alt: Fiscava desktop screenshot showing chat context inside the app.
-    caption: A second captured flow from automated UI review work in the repo.
+  - src: /images/projects/fiscava/dashboard.svg
+    alt: Fiscava dashboard mock-up with a net worth trend, KPI cards, and an insight panel.
+    caption: Dashboard view — illustrative sample data shown in place of real account values.
+  - src: /images/projects/fiscava/ask-fiscava.svg
+    alt: Fiscava "Ask Fiscava" assistant mock-up answering an affordability question.
+    caption: Ask Fiscava answers money questions against your accounts, expenses, and goals. Sample data shown.
 links:
   live: https://fiscava.app
 ---
@@ -48,7 +48,3 @@ I have treated Fiscava as a product first. The work has included modelling the c
 ## What makes it interesting
 
 The challenge is product judgement. A finance app can become bloated very quickly. The job is deciding what deserves to be first-class, what can wait, and what should never be built at all.
-
-## What still belongs here
-
-Next step: replace the current repo-captured images with a fuller set of polished product screenshots, add a cleaner timeline showing how ExpenseFlow became Fiscava, and explain the architecture behind the current product shape in more concrete terms.

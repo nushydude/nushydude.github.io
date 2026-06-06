@@ -39,6 +39,45 @@ a {
   background: rgba(125, 211, 252, 0.22);
 }
 
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0.5rem;
+  z-index: 100;
+  transform: translateY(-160%);
+  border-radius: 9999px;
+  background: var(--accent-strong);
+  color: #020617;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-menu > summary {
+  list-style: none;
+}
+
+.site-menu > summary::-webkit-details-marker {
+  display: none;
+}
+
+.site-menu .site-menu-close {
+  display: none;
+}
+
+.site-menu[open] .site-menu-open {
+  display: none;
+}
+
+.site-menu[open] .site-menu-close {
+  display: block;
+}
+
 .page-shell {
   position: relative;
 }

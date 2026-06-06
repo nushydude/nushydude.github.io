@@ -12,7 +12,15 @@ export const site = {
     { href: '/resume', label: 'Resume' },
     { href: '/contact', label: 'Contact' },
   ],
+  email: 'cdan.dharmasena@gmail.com',
   social: {
     github: 'https://github.com/nushydude',
+    linkedin: 'https://www.linkedin.com/in/cdandharmasena',
+    email: 'mailto:cdan.dharmasena@gmail.com',
   },
+  secondaryNav: [
+    { href: '/now', label: 'Now' },
+    { href: '/uses', label: 'Uses' },
+    { href: '/rss.xml', label: 'RSS' },
+  ],
 };

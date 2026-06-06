@@ -35,6 +35,8 @@ const years = project.data.yearEnd
       <img
         src={project.data.coverImage}
         alt={`Visual preview for ${project.data.title}`}
+        loading="lazy"
+        decoding="async"
         class="w-full rounded-[1.1rem] border border-white/10 transition duration-300 group-hover:scale-[1.015] group-hover:border-sky-300/25"
       />
     </div>

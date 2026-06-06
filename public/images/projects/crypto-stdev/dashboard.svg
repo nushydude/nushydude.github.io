@@ -1,0 +1,121 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Sidebar -->
+  <rect width="236" height="640" fill="#0a0b0d"/>
+  <text x="24" y="46" fill="#f8fafc" font-size="20" font-weight="700">₿ crypto·stdev</text>
+
+  <text x="24" y="96" fill="#6b7280" font-size="11" font-weight="700" letter-spacing="1.5">SIGNALS</text>
+  <rect x="12" y="108" width="212" height="36" rx="9" fill="#1e293b"/>
+  <text x="44" y="131" fill="#f8fafc" font-size="15" font-weight="600">Dashboard</text>
+  <text x="44" y="171" fill="#9ca3af" font-size="15">Single Token</text>
+  <text x="44" y="207" fill="#9ca3af" font-size="15">Best DCA</text>
+
+  <text x="24" y="252" fill="#6b7280" font-size="11" font-weight="700" letter-spacing="1.5">HOLDINGS</text>
+  <text x="44" y="284" fill="#9ca3af" font-size="15">Portfolio</text>
+  <text x="44" y="320" fill="#9ca3af" font-size="15">Transactions</text>
+
+  <text x="24" y="364" fill="#6b7280" font-size="11" font-weight="700" letter-spacing="1.5">MARKET</text>
+  <text x="44" y="396" fill="#9ca3af" font-size="15">Market</text>
+  <text x="44" y="432" fill="#9ca3af" font-size="15">F&amp;G Index</text>
+  <rect x="150" y="418" width="30" height="20" rx="10" fill="#ef4444"/>
+  <text x="165" y="432" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">48</text>
+
+  <text x="24" y="476" fill="#6b7280" font-size="11" font-weight="700" letter-spacing="1.5">ACCOUNT &amp; SETUP</text>
+  <text x="44" y="508" fill="#9ca3af" font-size="15">Settings</text>
+  <text x="44" y="544" fill="#9ca3af" font-size="15">Help</text>
+
+  <circle cx="36" cy="600" r="16" fill="#2563eb"/>
+  <text x="36" y="605" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">SU</text>
+  <text x="62" y="596" fill="#e5e7eb" font-size="14" font-weight="600">Sample User</text>
+  <text x="62" y="615" fill="#6b7280" font-size="12">demo data</text>
+
+  <!-- Main -->
+  <text x="272" y="58" fill="#0f172a" font-size="30" font-weight="700">Dashboard</text>
+  <text x="1248" y="50" fill="#64748b" font-size="13" text-anchor="end">Interval: 1d · <tspan fill="#2563eb">edit DCA universe</tspan></text>
+
+  <text x="272" y="106" fill="#334155" font-size="16" font-weight="600">Your portfolio</text>
+  <text x="1248" y="106" fill="#2563eb" font-size="13" text-anchor="end">full breakdown →</text>
+
+  <!-- KPI cards (sample data) -->
+  <g>
+    <rect x="272" y="124" width="232" height="96" rx="12" fill="#ffffff" stroke="#e8eaed"/>
+    <text x="292" y="152" fill="#94a3b8" font-size="11" font-weight="600" letter-spacing="1">NET WORTH</text>
+    <text x="292" y="182" fill="#0f172a" font-size="22" font-weight="700">100,000.00 <tspan font-size="13" fill="#64748b">USDT</tspan></text>
+    <text x="292" y="204" fill="#94a3b8" font-size="12">≈ 1.50000000 BTC</text>
+
+    <rect x="516" y="124" width="232" height="96" rx="12" fill="#ffffff" stroke="#e8eaed"/>
+    <text x="536" y="152" fill="#94a3b8" font-size="11" font-weight="600" letter-spacing="1">UNREALISED P/L</text>
+    <text x="536" y="182" fill="#16a34a" font-size="22" font-weight="700">+12,500.00 <tspan font-size="13">USDT</tspan></text>
+    <text x="536" y="204" fill="#16a34a" font-size="12">+14.30%</text>
+
+    <rect x="760" y="124" width="232" height="96" rx="12" fill="#ffffff" stroke="#e8eaed"/>
+    <text x="780" y="152" fill="#94a3b8" font-size="11" font-weight="600" letter-spacing="1">REALISED P/L</text>
+    <text x="780" y="182" fill="#16a34a" font-size="22" font-weight="700">+8,400.00 <tspan font-size="13">USDT</tspan></text>
+    <text x="780" y="204" fill="#94a3b8" font-size="12">from sells</text>
+
+    <rect x="1004" y="124" width="244" height="96" rx="12" fill="#ffffff" stroke="#e8eaed"/>
+    <text x="1024" y="152" fill="#94a3b8" font-size="11" font-weight="600" letter-spacing="1">BTC STACK</text>
+    <text x="1024" y="182" fill="#0f172a" font-size="22" font-weight="700">55.0%</text>
+    <text x="1024" y="204" fill="#94a3b8" font-size="12">of portfolio in BTC</text>
+  </g>
+
+  <!-- Market regime banner -->
+  <rect x="272" y="236" width="976" height="44" rx="10" fill="#f0fdf4" stroke="#dcfce7"/>
+  <circle cx="296" cy="258" r="5" fill="#16a34a"/>
+  <text x="312" y="263" fill="#166534" font-size="13" font-weight="600">MARKET REGIME<tspan fill="#15803d" font-weight="400"> · BTC 200-SMA rising · macro neutral</tspan></text>
+
+  <!-- Signal cards -->
+  <g>
+    <!-- BTC -->
+    <rect x="272" y="300" width="314" height="178" rx="12" fill="#ffffff" stroke="#e8eaed"/>
+    <text x="294" y="336" fill="#0f172a" font-size="18" font-weight="700">BTCUSDT</text>
+    <rect x="478" y="318" width="92" height="26" rx="6" fill="#dcfce7"/>
+    <text x="524" y="336" fill="#166534" font-size="12" font-weight="700" text-anchor="middle">ACCUMULATE</text>
+    <text x="294" y="360" fill="#94a3b8" font-size="12">22% conviction · med</text>
+    <text x="294" y="392" fill="#475569" font-size="13">Cycle risk</text>
+    <text x="570" y="392" fill="#475569" font-size="13" text-anchor="end">0.50 · Fair value</text>
+    <rect x="294" y="400" width="276" height="6" rx="3" fill="#eef0f3"/>
+    <rect x="294" y="400" width="138" height="6" rx="3" fill="#84cc16"/>
+    <rect x="294" y="420" width="150" height="24" rx="6" fill="#fef2f2"/>
+    <text x="304" y="437" fill="#b91c1c" font-size="11">DrawdownFromHigh 0.90</text>
+    <rect x="294" y="450" width="140" height="24" rx="6" fill="#f0fdf4"/>
+    <text x="304" y="467" fill="#15803d" font-size="11">MeanMinusSigma 0.52</text>
+
+    <!-- ETH -->
+    <rect x="603" y="300" width="314" height="178" rx="12" fill="#ffffff" stroke="#e8eaed"/>
+    <text x="625" y="336" fill="#0f172a" font-size="18" font-weight="700">ETHUSDT</text>
+    <rect x="809" y="318" width="92" height="26" rx="6" fill="#dcfce7"/>
+    <text x="855" y="336" fill="#166534" font-size="12" font-weight="700" text-anchor="middle">ACCUMULATE</text>
+    <text x="625" y="360" fill="#94a3b8" font-size="12">18% conviction · low</text>
+    <text x="625" y="392" fill="#475569" font-size="13">Cycle risk</text>
+    <text x="901" y="392" fill="#475569" font-size="13" text-anchor="end">0.45 · Fair value</text>
+    <rect x="625" y="400" width="276" height="6" rx="3" fill="#eef0f3"/>
+    <rect x="625" y="400" width="124" height="6" rx="3" fill="#84cc16"/>
+    <rect x="625" y="420" width="150" height="24" rx="6" fill="#fef2f2"/>
+    <text x="635" y="437" fill="#b91c1c" font-size="11">DrawdownFromHigh 1.00</text>
+    <rect x="625" y="450" width="140" height="24" rx="6" fill="#f0fdf4"/>
+    <text x="635" y="467" fill="#15803d" font-size="11">MeanMinusSigma 0.41</text>
+
+    <!-- SOL -->
+    <rect x="934" y="300" width="314" height="178" rx="12" fill="#ffffff" stroke="#e8eaed"/>
+    <text x="956" y="336" fill="#0f172a" font-size="18" font-weight="700">SOLUSDT</text>
+    <rect x="1184" y="318" width="56" height="26" rx="6" fill="#fef3c7"/>
+    <text x="1212" y="336" fill="#92400e" font-size="12" font-weight="700" text-anchor="middle">TRIM</text>
+    <text x="956" y="360" fill="#94a3b8" font-size="12">12% conviction · med</text>
+    <text x="956" y="392" fill="#475569" font-size="13">Cycle risk</text>
+    <text x="1232" y="392" fill="#475569" font-size="13" text-anchor="end">0.55 · Extended</text>
+    <rect x="956" y="400" width="276" height="6" rx="3" fill="#eef0f3"/>
+    <rect x="956" y="400" width="180" height="6" rx="3" fill="#eab308"/>
+    <rect x="956" y="420" width="150" height="24" rx="6" fill="#fef2f2"/>
+    <text x="966" y="437" fill="#b91c1c" font-size="11">DrawdownFromHigh 0.95</text>
+    <rect x="956" y="450" width="120" height="24" rx="6" fill="#f0fdf4"/>
+    <text x="966" y="467" fill="#15803d" font-size="11">BollingerLower 0.60</text>
+  </g>
+
+  <!-- Things to do -->
+  <rect x="272" y="498" width="976" height="92" rx="12" fill="#ffffff" stroke="#e8eaed"/>
+  <text x="294" y="534" fill="#0f172a" font-size="16" font-weight="700">Things to do</text>
+  <text x="1228" y="534" fill="#94a3b8" font-size="13" text-anchor="end">0 items</text>
+  <text x="294" y="566" fill="#64748b" font-size="13" font-style="italic">All clear — nothing's drifting and signals are quiet.</text>
+</svg>

@@ -17,13 +17,13 @@ yearStart: 2026
 sortOrder: 80
 coverImage: /images/projects/pantry-ping-card.svg
 heroImage:
-  src: /images/projects/pantry-ping/final-renderings.png
+  src: /images/projects/pantry-ping/final-renderings.jpg
   alt: pantry-ping mobile design render showing the grocery list flow.
 gallery:
-  - src: /images/projects/pantry-ping/final-renderings.png
+  - src: /images/projects/pantry-ping/final-renderings.jpg
     alt: pantry-ping mobile render showing the main list experience.
     caption: Current product rendering from the pantry-ping repo.
-  - src: /images/projects/pantry-ping/tripmode.png
+  - src: /images/projects/pantry-ping/tripmode.jpg
     alt: pantry-ping mobile render showing an alternate pantry-ping flow.
     caption: Supporting design render from ongoing pantry-ping work.
 links:
@@ -46,7 +46,3 @@ The product combines shopping items, pantry state, and recurring reminders into 
 ## What makes it interesting
 
 The interesting work is in the rules. What should happen when something goes out of stock? When should a recurring staple create an item, and when should it back off because the list already has one? Those details are where the product either earns trust or becomes background irritation.
-
-## What still belongs here
-
-This page now has product renders, but it still needs captured in-app screenshots, a clearer data-model sketch, and a tighter explanation of how recurring items, pantry links, and duplicate handling fit together.

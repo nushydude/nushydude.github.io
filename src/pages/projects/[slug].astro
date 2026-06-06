@@ -18,6 +18,7 @@ const years = project.data.yearEnd
 const projectLinks = project.data.links
   ? [
       project.data.links.live ? { href: project.data.links.live, label: 'Live site' } : null,
+      project.data.links.download ? { href: project.data.links.download, label: 'Download for Windows' } : null,
       project.data.links.repo ? { href: project.data.links.repo, label: 'Repository' } : null,
       project.data.links.caseStudy ? { href: project.data.links.caseStudy, label: 'Case study' } : null,
       project.data.links.appStore ? { href: project.data.links.appStore, label: 'App store' } : null,
@@ -29,9 +30,11 @@ const heroImage = project.data.heroImage ?? (project.data.coverImage
       alt: `Visual preview for ${project.data.title}`,
     }
   : null);
+const ogCandidate = project.data.ogImage ?? project.data.heroImage?.src ?? project.data.coverImage;
+const ogImage = ogCandidate && !ogCandidate.endsWith('.svg') ? ogCandidate : undefined;
 ---
 
-<BaseLayout title={project.data.title} description={project.data.summary}>
+<BaseLayout title={project.data.title} description={project.data.summary} image={ogImage} type="article">
   <article class="mx-auto max-w-5xl px-6 pb-10 pt-16 md:pb-14 md:pt-24">
     <a href="/projects/" class="mb-6 inline-flex text-sm font-medium text-sky-300 hover:text-sky-200">← Back to projects</a>
 
@@ -56,7 +59,7 @@ const heroImage = project.data.heroImage ?? (project.data.coverImage
     <div class="surface-card mt-8 overflow-hidden rounded-[2rem]">
       {heroImage ? (
         <div class="border-b border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.14),_transparent_40%),linear-gradient(135deg,rgba(15,23,42,0.96),rgba(15,23,42,0.72))] p-4 md:p-6">
-          <img src={heroImage.src} alt={heroImage.alt} class="w-full rounded-[1.5rem] border border-white/10" />
+          <img src={heroImage.src} alt={heroImage.alt} decoding="async" class="w-full rounded-[1.5rem] border border-white/10" />
         </div>
       ) : (
         <div class="border-b border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.14),_transparent_40%),linear-gradient(135deg,rgba(15,23,42,0.96),rgba(15,23,42,0.72))] p-8 md:p-10">
@@ -86,7 +89,7 @@ const heroImage = project.data.heroImage ?? (project.data.coverImage
           <div class="grid gap-6 md:grid-cols-2">
             {project.data.gallery.map((image) => (
               <figure class="surface-card overflow-hidden rounded-[1.5rem] p-3">
-                <img src={image.src} alt={image.alt} class="w-full rounded-[1rem] border border-white/10 bg-slate-950/60" />
+                <img src={image.src} alt={image.alt} loading="lazy" decoding="async" class="w-full rounded-[1rem] border border-white/10 bg-slate-950/60" />
                 {image.caption && <figcaption class="px-2 pt-4 text-sm leading-7 text-slate-400">{image.caption}</figcaption>}
               </figure>
             ))}

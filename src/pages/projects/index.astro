@@ -50,6 +50,8 @@ const remainingProjects = projects.filter((project) => project.id !== flagshipPr
             <img
               src={flagshipProject.data.heroImage?.src ?? flagshipProject.data.coverImage}
               alt={flagshipProject.data.heroImage?.alt ?? `Visual preview for ${flagshipProject.data.title}`}
+              loading="lazy"
+              decoding="async"
               class="w-full rounded-[1.2rem] border border-white/10 transition duration-300 group-hover:scale-[1.015] group-hover:border-sky-300/25"
             />
           </a>

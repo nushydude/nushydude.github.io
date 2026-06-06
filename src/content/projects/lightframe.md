@@ -27,6 +27,7 @@ gallery:
     alt: LightFrame concept image showing a fast folder browsing workflow.
     caption: A second generated mock showing the folder and filmstrip interaction.
 links:
+  download: https://github.com/nushydude/lightframe/releases
   repo: https://github.com/nushydude/lightframe
 ---
 
@@ -45,7 +46,3 @@ The app combines a Tauri desktop shell with a React front end and Rust-backed fi
 ## What makes it interesting
 
 Small utilities still have real product decisions in them. Startup speed, folder behaviour, zooming, and the feel of navigation matter more here than a long feature list.
-
-## What still belongs here
-
-This page now has generated product mock-ups, but it still needs captured screenshots from the app itself, packaging notes, and a tighter write-up of the trade-offs behind the viewer workflow and performance work.

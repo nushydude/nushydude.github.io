@@ -1,6 +1,7 @@
 ---
 import { site } from '../../lib/site';
 const pathname = Astro.url.pathname;
+const isActive = (href: string) => pathname === href || pathname === `${href}/`;
 ---
 
 <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
@@ -9,13 +10,15 @@ const pathname = Astro.url.pathname;
       <span class="inline-flex h-2.5 w-2.5 rounded-full bg-sky-300 shadow-[0_0_20px_rgba(125,211,252,0.95)]"></span>
       <span>Anusha Dharmasena</span>
     </a>
+
     <nav class="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] p-1 text-sm text-slate-300 md:flex">
       {site.nav.map((item) => (
         <a
           href={item.href}
+          aria-current={isActive(item.href) ? 'page' : undefined}
           class:list={[
             'rounded-full px-4 py-2 transition',
-            pathname === item.href
+            isActive(item.href)
               ? 'bg-white/10 text-white shadow-[0_0_0_1px_rgba(255,255,255,0.06)]'
               : 'hover:text-sky-300',
           ]}
@@ -24,5 +27,38 @@ const pathname = Astro.url.pathname;
         </a>
       ))}
     </nav>
+
+    <details class="site-menu relative md:hidden">
+      <summary
+        class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-slate-200 transition hover:text-sky-300"
+        aria-label="Toggle navigation menu"
+      >
+        <svg class="site-menu-open h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+        <svg class="site-menu-close h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="6" y1="6" x2="18" y2="18" />
+          <line x1="6" y1="18" x2="18" y2="6" />
+        </svg>
+      </summary>
+      <nav class="absolute right-0 z-50 mt-3 w-56 rounded-2xl border border-white/10 bg-slate-950/95 p-2 text-sm text-slate-300 shadow-[0_24px_70px_-30px_rgba(2,6,23,1)] backdrop-blur-xl">
+        {site.nav.map((item) => (
+          <a
+            href={item.href}
+            aria-current={isActive(item.href) ? 'page' : undefined}
+            class:list={[
+              'block rounded-xl px-4 py-2.5 transition',
+              isActive(item.href)
+                ? 'bg-white/10 text-white'
+                : 'hover:bg-white/5 hover:text-sky-300',
+            ]}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+    </details>
   </div>
 </header>

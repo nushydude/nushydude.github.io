@@ -17,16 +17,17 @@ yearStart: 2022
 sortOrder: 70
 coverImage: /images/projects/crypto-stdev-card.svg
 heroImage:
-  src: /images/projects/crypto-stdev/dashboard-desktop.png
-  alt: crypto-stdev dashboard showing portfolio and market context widgets.
+  src: /images/projects/crypto-stdev/dashboard.svg
+  alt: crypto-stdev dashboard mock-up showing portfolio totals and per-token signals with sample data.
 gallery:
-  - src: /images/projects/crypto-stdev/dashboard-desktop.png
-    alt: crypto-stdev desktop dashboard screenshot.
-    caption: Dashboard snapshot from Playwright visual test artifacts.
-  - src: /images/projects/crypto-stdev/best-dca-desktop.png
-    alt: crypto-stdev desktop screenshot showing the best DCA view.
-    caption: Best-DCA screen captured from automated visual tests.
+  - src: /images/projects/crypto-stdev/dashboard.svg
+    alt: crypto-stdev dashboard mock-up with portfolio KPIs and accumulate/trim signals.
+    caption: Signals dashboard — illustrative sample portfolio values in place of real holdings.
+  - src: /images/projects/crypto-stdev/best-dca.svg
+    alt: crypto-stdev Best DCA mock-up showing target versus spot price per token.
+    caption: Best DCA view — sample target and spot prices, not live market data.
 links:
+  live: https://crypto-stdev-cra.vercel.app/
   repo: https://github.com/nushydude/crypto-stdev
 ---
 
@@ -45,7 +46,3 @@ The project has gone through multiple iterations around signals, monitoring, and
 ## What makes it interesting
 
 The hard part is product honesty. Data is easy to accumulate. Deciding which parts matter, and how to present them without encouraging bad confidence, is where the work gets interesting.
-
-## What still belongs here
-
-This page now has repo-captured product screens, but it still needs version-history notes, some architecture detail, and clearer examples of the metrics and alerts that ended up being genuinely useful.

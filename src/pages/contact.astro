@@ -18,12 +18,17 @@ import { site } from '../lib/site';
   <section class="mx-auto max-w-5xl px-6 py-8 md:py-10">
     <div class="grid gap-6 md:grid-cols-2">
       <div class="surface-card rounded-[2rem] p-8">
-        <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white">Best starting point</h2>
+        <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white">Where to reach me</h2>
         <ul class="mt-5 space-y-4 text-sm leading-7 text-slate-300">
           <li>
-            GitHub: <a class="text-sky-300 hover:text-sky-200" href={site.social.github}>{site.social.github}</a>
+            Email: <a class="text-sky-300 hover:text-sky-200" href={site.social.email}>{site.email}</a>
           </li>
-          <li>LinkedIn and direct email can be added later once I am happy they are the right public endpoints for this site.</li>
+          <li>
+            LinkedIn: <a class="text-sky-300 hover:text-sky-200" href={site.social.linkedin} target="_blank" rel="noreferrer">in/cdandharmasena</a>
+          </li>
+          <li>
+            GitHub: <a class="text-sky-300 hover:text-sky-200" href={site.social.github} target="_blank" rel="noreferrer">@nushydude</a>
+          </li>
         </ul>
       </div>
       <div class="surface-card rounded-[2rem] p-8">
