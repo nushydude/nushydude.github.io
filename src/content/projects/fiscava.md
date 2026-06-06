@@ -18,15 +18,15 @@ yearStart: 2025
 sortOrder: 100
 coverImage: /images/projects/fiscava-card.svg
 heroImage:
-  src: /images/projects/fiscava/dashboard.svg
-  alt: Fiscava dashboard mock-up showing net worth, savings rate, and spending insights with sample data.
+  src: /images/projects/fiscava/dashboard.png
+  alt: Fiscava dashboard showing the Ask Fiscava advisor, a suggested next step, and key metrics.
 gallery:
-  - src: /images/projects/fiscava/dashboard.svg
-    alt: Fiscava dashboard mock-up with a net worth trend, KPI cards, and an insight panel.
-    caption: Dashboard view — illustrative sample data shown in place of real account values.
-  - src: /images/projects/fiscava/ask-fiscava.svg
-    alt: Fiscava "Ask Fiscava" assistant mock-up answering an affordability question.
-    caption: Ask Fiscava answers money questions against your accounts, expenses, and goals. Sample data shown.
+  - src: /images/projects/fiscava/insights.png
+    alt: Fiscava insights page showing spending health, savings rate, cash balances, and a three-month outlook.
+    caption: Insights — spending health, savings rate, cash balances, and a forward outlook. Shown with demo data.
+  - src: /images/projects/fiscava/networth.png
+    alt: Fiscava net worth page showing assets, liabilities, leverage, and a twelve-month trend.
+    caption: Net worth — assets, liabilities, and a twelve-month trend. Shown with demo data.
 links:
   live: https://fiscava.app
 ---
