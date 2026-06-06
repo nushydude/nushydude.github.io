@@ -6,15 +6,18 @@ status: active
 role: Product designer and engineer
 stack:
   - TypeScript
-  - Web app
+  - Next.js
   - Product UX
   - Household workflows
 tags:
   - household
   - product
   - ux
-yearStart: 2025
+yearStart: 2026
 coverImage: /images/projects/pantry-ping-card.svg
+links:
+  live: https://pantry-ping.vercel.app
+  repo: https://github.com/nushydude/pantry-ping
 ---
 
 ## Overview

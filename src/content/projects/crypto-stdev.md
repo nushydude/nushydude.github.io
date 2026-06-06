@@ -1,20 +1,22 @@
 ---
 title: crypto-stdev
-summary: A crypto tooling project that combines portfolio views, alerts, and market context without pretending certainty where none exists.
-featured: false
+summary: A crypto decision-support project that combines portfolio views, alerts, and market context without pretending certainty.
+featured: true
 status: maintained
 role: Builder and iterative product owner
 stack:
   - TypeScript
-  - Data products
+  - JavaScript
   - Market signals
   - Portfolio tooling
 tags:
   - crypto
   - analytics
   - product
-yearStart: 2024
+yearStart: 2022
 coverImage: /images/projects/crypto-stdev-card.svg
+links:
+  repo: https://github.com/nushydude/crypto-stdev
 ---
 
 ## Overview

@@ -6,7 +6,7 @@ import PostCard from '../components/blog/PostCard.astro';
 
 const projects = (await getCollection('projects', ({ data }) => !data.draft && data.featured))
   .sort((a, b) => b.data.yearStart - a.data.yearStart)
-  .slice(0, 3);
+  .slice(0, 4);
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
@@ -46,10 +46,9 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
       </div>
 
       <aside class="surface-card rounded-[2rem] p-6 md:p-8">
-        <div class="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950">
-          <img src="/images/profile/profile.jpg" alt="Portrait of Anusha Dharmasena" class="h-auto w-full object-cover opacity-95 shadow-[0_24px_60px_-34px_rgba(2,6,23,0.95)]" />
-          <div class="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-slate-950 via-slate-950/55 to-transparent"></div>
-          <div class="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2">
+        <div class="rounded-[1.5rem] border border-white/10 bg-[radial-gradient(circle_at_top,_rgba(125,211,252,0.12),_transparent_58%),linear-gradient(180deg,rgba(15,23,42,0.98),rgba(15,23,42,0.78))] px-6 py-8 text-center">
+          <img src="/images/profile/profile.jpg" alt="Photo of Anusha Dharmasena" class="mx-auto h-44 w-44 rounded-full border border-white/10 object-cover shadow-[0_24px_60px_-34px_rgba(2,6,23,0.95)] md:h-48 md:w-48" />
+          <div class="mt-5 flex flex-wrap justify-center gap-2">
             <span class="pill text-xs">Melbourne</span>
             <span class="pill text-xs">Tech lead</span>
             <span class="pill text-xs">Product-minded builder</span>

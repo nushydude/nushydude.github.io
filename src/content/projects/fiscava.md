@@ -1,6 +1,6 @@
 ---
 title: Fiscava
-summary: Personal finance software that grew from expense tracking into a broader product for clearer money decisions.
+summary: Personal finance software that grew out of expense tracking into a broader product for clearer money decisions.
 featured: true
 status: active
 role: Founder, product builder, and engineer
@@ -13,7 +13,7 @@ tags:
   - finance
   - product
   - side-project
-yearStart: 2024
+yearStart: 2025
 coverImage: /images/projects/fiscava-card.svg
 links:
   live: https://fiscava.app
