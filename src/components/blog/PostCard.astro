@@ -2,6 +2,7 @@
 interface Props {
   post: {
     id: string;
+    body?: string;
     data: {
       title: string;
       summary: string;
@@ -17,10 +18,15 @@ const published = post.data.publishedAt.toLocaleDateString('en-AU', {
   month: 'short',
   year: 'numeric',
 });
+const words = post.body?.trim().split(/\s+/).filter(Boolean).length ?? 0;
+const readingTime = words ? Math.max(1, Math.round(words / 200)) : null;
 ---
 
-<article class="surface-card group rounded-[1.75rem] p-6 md:p-7">
-  <p class="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-sky-300">{published}</p>
+<article class="surface-card group flex h-full flex-col rounded-[1.75rem] p-6 md:p-7">
+  <p class="mb-3 flex flex-wrap items-center gap-x-2 text-xs font-semibold uppercase tracking-[0.24em] text-sky-300">
+    <time datetime={post.data.publishedAt.toISOString()}>{published}</time>
+    {readingTime && <><span aria-hidden="true" class="text-slate-600">•</span><span class="text-slate-400">{readingTime} min</span></>}
+  </p>
   <h3 class="mb-3 text-2xl font-semibold tracking-[-0.04em] text-white md:text-[1.75rem]">
     <a href={`/blog/${post.id}/`} class="inline-flex items-center gap-2 hover:text-sky-300">
       {post.data.title}
@@ -28,9 +34,11 @@ const published = post.data.publishedAt.toLocaleDateString('en-AU', {
     </a>
   </h3>
   <p class="mb-5 text-sm leading-7 text-slate-300">{post.data.summary}</p>
-  <ul class="flex flex-wrap gap-2">
+  <ul class="mt-auto flex flex-wrap gap-2">
     {post.data.tags.map((tag) => (
-      <li class="pill text-xs">{tag}</li>
+      <li>
+        <a href={`/blog/tags/${tag}/`} class="pill text-xs transition hover:border-sky-300/40 hover:text-sky-200">#{tag}</a>
+      </li>
     ))}
   </ul>
 </article>

@@ -2,6 +2,8 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ScreenshotCarousel from '../../components/projects/ScreenshotCarousel.astro';
+import Breadcrumbs from '../../components/site/Breadcrumbs.astro';
+import { site } from '../../lib/site';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects', ({ data }) => !data.draft);
@@ -48,11 +50,45 @@ for (const image of project.data.gallery) {
   }
 }
 const screenshots = [...screenshotMap.values()];
+
+const breadcrumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Projects', href: '/projects/' },
+  { name: project.data.title, href: `/projects/${project.id}/` },
+];
+
+const externalLinks = [
+  project.data.links?.live,
+  project.data.links?.repo,
+  project.data.links?.download,
+].filter(Boolean);
+
+const creativeWorkLd = {
+  '@type': 'CreativeWork',
+  '@id': `${site.url}/projects/${project.id}/#project`,
+  name: project.data.title,
+  description: project.data.summary,
+  url: `${site.url}/projects/${project.id}/`,
+  author: { '@id': `${site.url}/#person` },
+  keywords: [...project.data.tags, ...project.data.stack].join(', '),
+  dateCreated: String(project.data.yearStart),
+  ...(externalLinks.length > 0 ? { sameAs: externalLinks } : {}),
+  ...(ogImage ? { image: new URL(ogImage, site.url).toString() } : {}),
+};
 ---
 
-<BaseLayout title={project.data.title} description={project.data.summary} image={ogImage} type="article">
-  <article class="mx-auto max-w-5xl px-6 pb-10 pt-16 md:pb-14 md:pt-24">
-    <a href="/projects/" class="mb-6 inline-flex text-sm font-medium text-sky-300 hover:text-sky-200">← Back to projects</a>
+<BaseLayout
+  title={project.data.title}
+  description={project.data.summary}
+  image={ogImage}
+  imageAlt={ogImage ? heroImage?.alt : undefined}
+  type="article"
+  article={{ tags: project.data.tags }}
+  breadcrumbs={breadcrumbs}
+  jsonLd={creativeWorkLd}
+>
+  <article class="mx-auto max-w-5xl px-6 pb-10 pt-10 md:pb-14 md:pt-16">
+    <Breadcrumbs items={breadcrumbs} />
 
     <div class={`rounded-[2rem] p-8 md:p-10 ${project.data.flagship ? 'surface-card-strong border border-sky-300/18' : 'surface-card-strong'}`}>
       <p class="section-label">{project.data.flagship ? 'Flagship app' : project.data.status}</p>

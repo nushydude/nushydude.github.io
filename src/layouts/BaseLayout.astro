@@ -5,23 +5,85 @@ import ScrollToTop from '../components/site/ScrollToTop.astro';
 import '../styles/global.css';
 import { site } from '../lib/site';
 
+interface Crumb {
+  name: string;
+  href: string;
+}
+
 interface Props {
   title?: string;
   description?: string;
   image?: string;
+  imageAlt?: string;
   type?: 'website' | 'article';
+  article?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+    author?: string;
+    tags?: string[];
+  };
+  breadcrumbs?: Crumb[];
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
   title = site.title,
   description = site.description,
   image = '/images/og/og-default.png',
+  imageAlt = `${site.author} — ${site.title}`,
   type = 'website',
+  article,
+  breadcrumbs,
+  jsonLd,
 } = Astro.props;
 
 const pageTitle = title === site.title ? site.title : `${title} | ${site.title}`;
 const canonical = new URL(Astro.url.pathname, site.url).toString();
 const ogImage = new URL(image, site.url).toString();
+
+// ── Structured data (JSON-LD) ───────────────────────────────────────────────
+const personLd = {
+  '@type': 'Person',
+  '@id': `${site.url}/#person`,
+  name: site.author,
+  url: site.url,
+  jobTitle: 'Tech lead and product-minded software builder',
+  image: new URL('/images/profile/profile.jpg', site.url).toString(),
+  sameAs: [site.social.github, site.social.linkedin],
+};
+
+const websiteLd = {
+  '@type': 'WebSite',
+  '@id': `${site.url}/#website`,
+  url: site.url,
+  name: site.title,
+  description: site.description,
+  inLanguage: 'en',
+  publisher: { '@id': `${site.url}/#person` },
+};
+
+const graph: Record<string, unknown>[] = [personLd, websiteLd];
+
+if (breadcrumbs && breadcrumbs.length > 0) {
+  graph.push({
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs.map((crumb, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: crumb.name,
+      item: new URL(crumb.href, site.url).toString(),
+    })),
+  });
+}
+
+if (jsonLd) {
+  graph.push(...(Array.isArray(jsonLd) ? jsonLd : [jsonLd]));
+}
+
+const structuredData = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': graph,
+}).replace(/</g, '\\u003c');
 ---
 
 <!doctype html>
@@ -31,23 +93,54 @@ const ogImage = new URL(image, site.url).toString();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <meta name="author" content={site.author} />
     <meta name="theme-color" content="#050816" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Icons & manifest -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts (preconnect avoids a render-blocking CSS @import) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"
+    />
+
     <link rel="canonical" href={canonical} />
     <link rel="alternate" type="application/rss+xml" title={`${site.title} Blog`} href="/rss.xml" />
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+
+    <!-- Open Graph / Twitter -->
     <meta property="og:site_name" content={site.title} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="en_AU" />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    {type === 'article' && article && (
+      <>
+        {article.publishedTime && <meta property="article:published_time" content={article.publishedTime} />}
+        {article.modifiedTime && <meta property="article:modified_time" content={article.modifiedTime} />}
+        <meta property="article:author" content={article.author ?? site.author} />
+        {article.tags?.map((tag) => <meta property="article:tag" content={tag} />)}
+      </>
+    )}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={imageAlt} />
+
+    <script type="application/ld+json" set:html={structuredData} />
   </head>
   <body class="page-shell min-h-screen bg-slate-950 text-slate-100 antialiased">
     <a href="#main" class="skip-link">Skip to content</a>

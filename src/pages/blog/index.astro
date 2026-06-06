@@ -6,17 +6,37 @@ import PostCard from '../../components/blog/PostCard.astro';
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf(),
 );
+
+const tagCounts = new Map<string, number>();
+for (const post of posts) {
+  for (const tag of post.data.tags) {
+    tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+  }
+}
+const tags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 ---
 
-<BaseLayout title="Blog" description="Writing on engineering, product thinking, and side projects.">
+<BaseLayout title="Blog" description="Writing on engineering, product thinking, and side projects by Anusha Dharmasena.">
   <section class="mx-auto max-w-6xl px-6 pb-10 pt-16 md:pb-14 md:pt-24">
     <div class="surface-card-strong rounded-[2rem] p-8 md:p-10">
-      <p class="section-label">Blog</p>
+      <p class="section-label">Blog · {posts.length} posts</p>
       <h1 class="mt-4 text-5xl font-semibold tracking-[-0.06em] text-white md:text-7xl md:leading-[0.96]">Writing on engineering, product work, and the kinds of side projects worth keeping</h1>
       <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
         A simple MDX-backed archive for notes that are technical enough to be useful, but still grounded in product and
         real-world trade-offs.
       </p>
+      {tags.length > 0 && (
+        <div class="mt-8">
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Browse by tag</p>
+          <ul class="mt-4 flex flex-wrap gap-2">
+            {tags.map(([tag, count]) => (
+              <li>
+                <a href={`/blog/tags/${tag}/`} class="pill text-xs transition hover:border-sky-300/40 hover:text-sky-200">#{tag} <span class="text-slate-500">{count}</span></a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   </section>
 

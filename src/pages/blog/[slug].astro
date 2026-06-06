@@ -1,40 +1,96 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/site/Breadcrumbs.astro';
+import PostCard from '../../components/blog/PostCard.astro';
+import { site } from '../../lib/site';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ data }) => !data.draft);
-  return posts.map((post) => ({
+  const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+    (a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf(),
+  );
+  return posts.map((post, i) => ({
     params: { slug: post.id },
-    props: { post },
+    props: {
+      post,
+      prev: posts[i + 1] ?? null, // older
+      next: posts[i - 1] ?? null, // newer
+      more: posts.filter((p) => p.id !== post.id).slice(0, 2),
+    },
   }));
 }
 
-const { post } = Astro.props;
+const { post, prev, next, more } = Astro.props;
 const { Content } = await render(post);
-const published = post.data.publishedAt.toLocaleDateString('en-AU', {
-  day: 'numeric',
-  month: 'long',
-  year: 'numeric',
-});
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
+const published = fmt(post.data.publishedAt);
+const updated = post.data.updatedAt ? fmt(post.data.updatedAt) : null;
+
+const words = post.body?.trim().split(/\s+/).filter(Boolean).length ?? 0;
+const readingTime = Math.max(1, Math.round(words / 200));
+
+const ogImg = post.data.ogImage ?? post.data.coverImage;
+
+const breadcrumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Blog', href: '/blog/' },
+  { name: post.data.title, href: `/blog/${post.id}/` },
+];
+
+const blogPostingLd = {
+  '@type': 'BlogPosting',
+  '@id': `${site.url}/blog/${post.id}/#article`,
+  headline: post.data.title,
+  description: post.data.summary,
+  datePublished: post.data.publishedAt.toISOString(),
+  dateModified: (post.data.updatedAt ?? post.data.publishedAt).toISOString(),
+  author: { '@id': `${site.url}/#person` },
+  publisher: { '@id': `${site.url}/#person` },
+  mainEntityOfPage: `${site.url}/blog/${post.id}/`,
+  keywords: post.data.tags.join(', '),
+  wordCount: words,
+  ...(ogImg ? { image: new URL(ogImg, site.url).toString() } : {}),
+};
+
+const article = {
+  publishedTime: post.data.publishedAt.toISOString(),
+  modifiedTime: (post.data.updatedAt ?? post.data.publishedAt).toISOString(),
+  tags: post.data.tags,
+};
 ---
 
-<BaseLayout title={post.data.title} description={post.data.summary} image={post.data.ogImage ?? post.data.coverImage} type="article">
-  <article class="mx-auto max-w-4xl px-6 pb-10 pt-16 md:pb-14 md:pt-24">
-    <div class="mb-6">
-      <a href="/blog/" class="inline-flex items-center gap-2 text-sm text-slate-400 transition hover:text-sky-300">
-        <span aria-hidden="true">←</span>
-        <span>Back to blog</span>
-      </a>
-    </div>
+<BaseLayout
+  title={post.data.title}
+  description={post.data.summary}
+  image={ogImg}
+  type="article"
+  article={article}
+  breadcrumbs={breadcrumbs}
+  jsonLd={blogPostingLd}
+>
+  <article class="mx-auto max-w-4xl px-6 pb-10 pt-10 md:pb-14 md:pt-16">
+    <Breadcrumbs items={breadcrumbs} />
 
     <div class="surface-card-strong rounded-[2rem] p-8 md:p-10">
-      <p class="section-label">{published}</p>
-      <h1 class="mt-4 text-5xl font-semibold tracking-[-0.06em] text-white md:text-7xl md:leading-[0.96]">{post.data.title}</h1>
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-semibold uppercase tracking-[0.22em] text-sky-300">
+        <time datetime={post.data.publishedAt.toISOString()}>{published}</time>
+        <span aria-hidden="true" class="text-slate-600">•</span>
+        <span class="text-slate-400">{readingTime} min read</span>
+      </div>
+      <h1 class="mt-4 text-4xl font-semibold tracking-[-0.05em] text-white md:text-6xl md:leading-[1]">{post.data.title}</h1>
       <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">{post.data.summary}</p>
-      <ul class="mt-8 flex flex-wrap gap-2">
-        {post.data.tags.map((tag) => <li class="pill text-xs">{tag}</li>)}
-      </ul>
+      {updated && <p class="mt-4 text-sm text-slate-500">Updated {updated}</p>}
+      {post.data.tags.length > 0 && (
+        <ul class="mt-8 flex flex-wrap gap-2">
+          {post.data.tags.map((tag) => (
+            <li>
+              <a href={`/blog/tags/${tag}/`} class="pill text-xs transition hover:border-sky-300/40 hover:text-sky-200">#{tag}</a>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
 
     <div class="surface-card mt-8 rounded-[2rem] p-8 md:p-10">
@@ -42,5 +98,36 @@ const published = post.data.publishedAt.toLocaleDateString('en-AU', {
         <Content />
       </div>
     </div>
+
+    {(prev || next) && (
+      <nav class="mt-8 grid gap-4 sm:grid-cols-2" aria-label="Older and newer posts">
+        {prev ? (
+          <a href={`/blog/${prev.id}/`} class="surface-card group rounded-2xl p-5 transition hover:-translate-y-0.5 hover:border-sky-300/35">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">← Older</p>
+            <p class="mt-2 font-medium leading-6 text-white group-hover:text-sky-200">{prev.data.title}</p>
+          </a>
+        ) : (
+          <div class="hidden sm:block"></div>
+        )}
+        {next && (
+          <a href={`/blog/${next.id}/`} class="surface-card group rounded-2xl p-5 text-right transition hover:-translate-y-0.5 hover:border-sky-300/35">
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Newer →</p>
+            <p class="mt-2 font-medium leading-6 text-white group-hover:text-sky-200">{next.data.title}</p>
+          </a>
+        )}
+      </nav>
+    )}
+
+    {more.length > 0 && (
+      <section class="mt-12">
+        <div class="mb-6 flex items-end justify-between gap-4">
+          <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white">More writing</h2>
+          <a href="/blog" class="text-sm text-sky-300 hover:text-sky-200">All posts →</a>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2">
+          {more.map((p) => <PostCard post={p} />)}
+        </div>
+      </section>
+    )}
   </article>
 </BaseLayout>

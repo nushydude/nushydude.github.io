@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
+
+/* Geist is loaded via a <link rel="preconnect"> + stylesheet in BaseLayout
+   so it does not block CSS parsing the way an @import would. */
 
 :root {
   color-scheme: dark;
@@ -17,8 +19,27 @@
   --shadow-card: 0 0 0 1px rgba(148, 163, 184, 0.14), 0 14px 40px -24px rgba(2, 6, 23, 0.92);
 }
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 body {

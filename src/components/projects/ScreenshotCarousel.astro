@@ -359,9 +359,14 @@ const first = images[0];
       dots.forEach((d, di) => d.setAttribute('aria-current', di === current ? 'true' : 'false'));
     };
 
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const scrollToSlide = (i: number) => {
       const idx = (i + slides.length) % slides.length;
-      slides[idx].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      slides[idx].scrollIntoView({
+        behavior: prefersReduced ? 'auto' : 'smooth',
+        inline: 'center',
+        block: 'nearest',
+      });
     };
 
     if (slides.length > 1) {

@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PostCard from '../../../components/blog/PostCard.astro';
+import Breadcrumbs from '../../../components/site/Breadcrumbs.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  const tags = [...new Set(posts.flatMap((p) => p.data.tags))].sort();
+  return tags.map((tag) => ({
+    params: { tag },
+    props: {
+      tag,
+      posts: posts
+        .filter((p) => p.data.tags.includes(tag))
+        .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf()),
+    },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+const breadcrumbs = [
+  { name: 'Home', href: '/' },
+  { name: 'Blog', href: '/blog/' },
+  { name: `#${tag}`, href: `/blog/tags/${tag}/` },
+];
+---
+
+<BaseLayout
+  title={`#${tag}`}
+  description={`Writing tagged "${tag}" by Anusha Dharmasena.`}
+  breadcrumbs={breadcrumbs}
+>
+  <section class="mx-auto max-w-6xl px-6 pb-10 pt-10 md:pb-14 md:pt-16">
+    <Breadcrumbs items={breadcrumbs} />
+    <div class="surface-card-strong rounded-[2rem] p-8 md:p-10">
+      <p class="section-label">Tag</p>
+      <h1 class="mt-4 text-5xl font-semibold tracking-[-0.06em] text-white md:text-6xl">#{tag}</h1>
+      <p class="mt-6 text-lg leading-8 text-slate-300">
+        {posts.length} post{posts.length === 1 ? '' : 's'} tagged <span class="text-white">{tag}</span>.
+        <a href="/blog" class="ml-2 text-sky-300 hover:text-sky-200">← All writing</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-6 py-8 md:py-10">
+    <div class="grid gap-6 lg:grid-cols-2">
+      {posts.map((post) => <PostCard post={post} />)}
+    </div>
+  </section>
+</BaseLayout>
