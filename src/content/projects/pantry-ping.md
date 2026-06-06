@@ -18,15 +18,24 @@ yearStart: 2026
 sortOrder: 80
 coverImage: /images/projects/pantry-ping-card.svg
 heroImage:
-  src: /images/projects/pantry-ping/final-renderings.jpg
-  alt: pantry-ping mobile design render showing the grocery list flow.
+  src: /images/projects/pantry-ping/list.png
+  alt: pantry-ping shopping list screen with categorised items, priorities, and staple suggestions.
 gallery:
-  - src: /images/projects/pantry-ping/final-renderings.jpg
-    alt: pantry-ping mobile render showing the main list experience.
-    caption: Current product rendering from the pantry-ping repo.
-  - src: /images/projects/pantry-ping/tripmode.jpg
-    alt: pantry-ping mobile render showing an alternate pantry-ping flow.
-    caption: Supporting design render from ongoing pantry-ping work.
+  - src: /images/projects/pantry-ping/list.png
+    alt: pantry-ping shopping list with categorised items, priorities, and "you usually buy now" suggestions.
+    caption: The shared shopping list — categorised and prioritised, with staple and habit suggestions.
+  - src: /images/projects/pantry-ping/pantry.png
+    alt: pantry-ping pantry screen tracking in-stock and out-of-stock items.
+    caption: Pantry tracking — when something runs out, it's added back to the list automatically.
+  - src: /images/projects/pantry-ping/staples.png
+    alt: pantry-ping recurring staples screen with due and paused templates.
+    caption: Recurring staples that regenerate on schedule, with due and paused states.
+  - src: /images/projects/pantry-ping/trip-mode.png
+    alt: pantry-ping in-store trip mode grouped by aisle with collection progress.
+    caption: Trip mode — an in-store view grouped by your store's aisle order.
+  - src: /images/projects/pantry-ping/ai-assist.png
+    alt: pantry-ping AI assist settings for connecting your own Claude or OpenAI key.
+    caption: Bring-your-own-key AI assist for meal suggestions and the household assistant.
 links:
   live: https://pantry-ping.vercel.app
   repo: https://github.com/nushydude/pantry-ping

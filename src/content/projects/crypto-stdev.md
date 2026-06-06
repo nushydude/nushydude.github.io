@@ -27,6 +27,9 @@ gallery:
   - src: /images/projects/crypto-stdev/best-dca.svg
     alt: crypto-stdev Best DCA mock-up showing target versus spot price per token.
     caption: Best DCA view — sample target and spot prices, not live market data.
+  - src: /images/projects/crypto-stdev/single-token.svg
+    alt: crypto-stdev single-token analysis mock-up showing the signal verdict and contributing factors.
+    caption: Single-token analysis — target vs spot, the action verdict, and the factors behind it. Sample data.
 links:
   live: https://crypto-stdev-cra.vercel.app/
   repo: https://github.com/nushydude/crypto-stdev

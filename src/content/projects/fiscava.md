@@ -28,6 +28,15 @@ gallery:
   - src: /images/projects/fiscava/networth.png
     alt: Fiscava net worth page showing assets, liabilities, leverage, and a twelve-month trend.
     caption: Net worth — assets, liabilities, and a twelve-month trend. Shown with demo data.
+  - src: /images/projects/fiscava/calendar.png
+    alt: Fiscava cashflow calendar showing income and expenses laid out across a month.
+    caption: Cashflow calendar — income and bills across the month, colour-coded by net. Shown with demo data.
+  - src: /images/projects/fiscava/debt-planner.png
+    alt: Fiscava debt planner showing balances, payoff outlook, and the accounts needing attention.
+    caption: Debt planner — balances, payoff timeline, and the next account to attack. Shown with demo data.
+  - src: /images/projects/fiscava/savings-goals.png
+    alt: Fiscava savings goals showing progress toward funded targets.
+    caption: Savings goals — progress toward funded targets. Shown with demo data.
 links:
   live: https://fiscava.app
 ---

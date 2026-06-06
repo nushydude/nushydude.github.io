@@ -1,0 +1,80 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect width="1280" height="640" fill="#ffffff"/>
+
+  <!-- Sidebar -->
+  <rect width="236" height="640" fill="#0a0b0d"/>
+  <text x="24" y="46" fill="#f8fafc" font-size="20" font-weight="700">₿ crypto·stdev</text>
+  <text x="24" y="96" fill="#6b7280" font-size="11" font-weight="700" letter-spacing="1.5">SIGNALS</text>
+  <text x="44" y="131" fill="#9ca3af" font-size="15">Dashboard</text>
+  <rect x="12" y="148" width="212" height="36" rx="9" fill="#1e293b"/>
+  <text x="44" y="171" fill="#f8fafc" font-size="15" font-weight="600">Single Token</text>
+  <text x="44" y="210" fill="#9ca3af" font-size="15">Best DCA</text>
+  <text x="24" y="252" fill="#6b7280" font-size="11" font-weight="700" letter-spacing="1.5">HOLDINGS</text>
+  <text x="44" y="284" fill="#9ca3af" font-size="15">Portfolio</text>
+  <text x="44" y="320" fill="#9ca3af" font-size="15">Transactions</text>
+  <text x="24" y="364" fill="#6b7280" font-size="11" font-weight="700" letter-spacing="1.5">MARKET</text>
+  <text x="44" y="396" fill="#9ca3af" font-size="15">Market</text>
+  <text x="44" y="432" fill="#9ca3af" font-size="15">F&amp;G Index</text>
+  <rect x="150" y="418" width="30" height="20" rx="10" fill="#ef4444"/>
+  <text x="165" y="432" fill="#ffffff" font-size="11" font-weight="700" text-anchor="middle">48</text>
+  <text x="24" y="476" fill="#6b7280" font-size="11" font-weight="700" letter-spacing="1.5">ACCOUNT &amp; SETUP</text>
+  <text x="44" y="508" fill="#9ca3af" font-size="15">Settings</text>
+  <text x="44" y="544" fill="#9ca3af" font-size="15">Help</text>
+  <circle cx="36" cy="600" r="16" fill="#2563eb"/>
+  <text x="36" y="605" fill="#ffffff" font-size="12" font-weight="700" text-anchor="middle">SU</text>
+  <text x="62" y="596" fill="#e5e7eb" font-size="14" font-weight="600">Sample User</text>
+  <text x="62" y="615" fill="#6b7280" font-size="12">demo data</text>
+
+  <!-- Left controls -->
+  <text x="272" y="60" fill="#475569" font-size="13" font-weight="600">Symbol</text>
+  <rect x="272" y="72" width="280" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="292" y="100" fill="#0f172a" font-size="15" font-weight="600">BTCUSDT</text>
+  <text x="528" y="100" fill="#94a3b8" font-size="13">▾</text>
+  <rect x="272" y="128" width="110" height="26" rx="6" fill="#eef2ff"/>
+  <text x="290" y="146" fill="#3730a3" font-size="12">BTCUSDT ✕</text>
+  <text x="272" y="196" fill="#475569" font-size="13" font-weight="600">Interval</text>
+  <rect x="272" y="208" width="280" height="44" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="292" y="236" fill="#0f172a" font-size="15">4 hours</text>
+  <text x="528" y="236" fill="#2563eb" font-size="13">▾</text>
+  <text x="272" y="296" fill="#475569" font-size="13" font-weight="600">Limit</text>
+  <rect x="272" y="308" width="280" height="44" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="292" y="336" fill="#0f172a" font-size="15">100</text>
+  <rect x="272" y="372" width="280" height="46" rx="8" fill="#2563eb"/>
+  <text x="412" y="400" fill="#ffffff" font-size="15" font-weight="600" text-anchor="middle">Submit</text>
+
+  <!-- Right analysis card -->
+  <rect x="588" y="40" width="660" height="560" rx="12" fill="#ffffff" stroke="#e8eaed"/>
+  <text x="612" y="78" fill="#475569" font-size="14">Target price = 95,000.00</text>
+  <text x="612" y="104" fill="#475569" font-size="14">Spot price = 92,500.00</text>
+  <text x="612" y="130" fill="#475569" font-size="14">Dip from target price = 2.63%</text>
+  <text x="612" y="160" fill="#475569" font-size="13">Buy the dip?</text>
+  <rect x="700" y="146" width="118" height="22" rx="11" fill="#16a34a"/>
+  <text x="759" y="161" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">Yes, DCA now.</text>
+
+  <!-- Clean price chart (no canvas mask) -->
+  <rect x="612" y="184" width="612" height="216" rx="10" fill="#f8fafc" stroke="#eef0f3"/>
+  <path d="M636 250 L704 268 L772 296 L840 336 L908 358 L976 332 L1044 302 L1112 292 L1180 282 L1200 278 L1200 372 L636 372 Z" fill="#dbeafe" fill-opacity="0.7"/>
+  <polyline points="636,250 704,268 772,296 840,336 908,358 976,332 1044,302 1112,292 1180,282 1200,278" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="612" y1="372" x2="1224" y2="372" stroke="#e2e8f0"/>
+
+  <!-- Verdict row -->
+  <rect x="612" y="424" width="100" height="26" rx="6" fill="#dcfce7"/>
+  <text x="662" y="442" fill="#166534" font-size="12" font-weight="700" text-anchor="middle">ACCUMULATE</text>
+  <text x="724" y="442" fill="#94a3b8" font-size="12">1d · model v5</text>
+  <rect x="828" y="424" width="110" height="26" rx="6" fill="#f1f5f9"/>
+  <text x="883" y="442" fill="#475569" font-size="12" text-anchor="middle">Neutral market</text>
+  <text x="1224" y="442" fill="#94a3b8" font-size="12" text-anchor="end">conf ●●○</text>
+
+  <text x="612" y="486" fill="#16a34a" font-size="13" font-weight="700">BUY <tspan font-size="16">65%</tspan></text>
+  <text x="720" y="486" fill="#dc2626" font-size="13" font-weight="700">SELL <tspan font-size="16">35%</tspan></text>
+
+  <text x="612" y="522" fill="#94a3b8" font-size="11" font-weight="700" letter-spacing="0.5">CONTRIBUTING FACTORS</text>
+  <text x="612" y="552" fill="#334155" font-size="13" font-family="ui-monospace, Menlo, monospace">MeanMinusSigma</text>
+  <text x="900" y="552" fill="#16a34a" font-size="12">BUY</text>
+  <rect x="948" y="544" width="200" height="8" rx="4" fill="#e2e8f0"/>
+  <rect x="948" y="544" width="150" height="8" rx="4" fill="#22c55e"/>
+  <text x="612" y="580" fill="#334155" font-size="13" font-family="ui-monospace, Menlo, monospace">BollingerLower</text>
+  <text x="900" y="580" fill="#16a34a" font-size="12">BUY</text>
+  <rect x="948" y="572" width="200" height="8" rx="4" fill="#e2e8f0"/>
+  <rect x="948" y="572" width="120" height="8" rx="4" fill="#22c55e"/>
+</svg>
