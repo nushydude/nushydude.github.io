@@ -1,0 +1,79 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects', ({ data }) => !data.draft);
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const years = project.data.yearEnd
+  ? `${project.data.yearStart}–${project.data.yearEnd}`
+  : `${project.data.yearStart}–present`;
+const projectLinks = project.data.links
+  ? [
+      project.data.links.live ? { href: project.data.links.live, label: 'Live site' } : null,
+      project.data.links.repo ? { href: project.data.links.repo, label: 'Repository' } : null,
+      project.data.links.caseStudy ? { href: project.data.links.caseStudy, label: 'Case study' } : null,
+      project.data.links.appStore ? { href: project.data.links.appStore, label: 'App store' } : null,
+    ].filter(Boolean)
+  : [];
+---
+
+<BaseLayout title={project.data.title} description={project.data.summary}>
+  <article class="mx-auto max-w-5xl px-6 pb-10 pt-16 md:pb-14 md:pt-24">
+    <div class="surface-card-strong rounded-[2rem] p-8 md:p-10">
+      <p class="section-label">{project.data.status}</p>
+      <h1 class="mt-4 text-5xl font-semibold tracking-[-0.06em] text-white md:text-7xl md:leading-[0.96]">{project.data.title}</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">{project.data.summary}</p>
+      <div class="mt-8 flex flex-wrap gap-3 text-sm text-slate-300">
+        <span class="pill">{years}</span>
+        <span class="pill">Role: {project.data.role}</span>
+        {project.data.stack.map((item) => <span class="pill">{item}</span>)}
+      </div>
+      {projectLinks.length > 0 && (
+        <div class="mt-8 flex flex-wrap gap-3">
+          {projectLinks.map((link) => (
+            <a href={link.href} class="button-secondary !px-5 !py-2.5 text-sm" target="_blank" rel="noreferrer">{link.label}</a>
+          ))}
+        </div>
+      )}
+    </div>
+
+    <div class="surface-card mt-8 overflow-hidden rounded-[2rem]">
+      {project.data.coverImage ? (
+        <div class="border-b border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.14),_transparent_40%),linear-gradient(135deg,rgba(15,23,42,0.96),rgba(15,23,42,0.72))] p-4 md:p-6">
+          <img src={project.data.coverImage} alt={`Visual preview for ${project.data.title}`} class="w-full rounded-[1.5rem] border border-white/10" />
+        </div>
+      ) : (
+        <div class="border-b border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(125,211,252,0.14),_transparent_40%),linear-gradient(135deg,rgba(15,23,42,0.96),rgba(15,23,42,0.72))] p-8 md:p-10">
+          <p class="text-xs font-semibold uppercase tracking-[0.24em] text-sky-300">Visual placeholder</p>
+          <div class="mt-5 grid gap-6 md:grid-cols-[1.1fr_0.9fr] md:items-end">
+            <div>
+              <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white">Screenshot slot for {project.data.title}</h2>
+              <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300">
+                Replace this panel with a real screenshot, product mock, or annotated UI once the visuals are ready. For now it
+                stops the page from feeling like a wall of text and marks the spot a case-study image should occupy.
+              </p>
+            </div>
+            <div class="grid gap-3 sm:grid-cols-2">
+              <div class="surface-card rounded-2xl p-4 text-sm leading-7 text-slate-300">Useful images here would usually show the main flow, the strongest product decision, or the constraint that shaped the build.</div>
+              <div class="surface-card rounded-2xl p-4 text-sm leading-7 text-slate-300">If no screenshot exists yet, a diagram or architecture slice is usually better than an empty space.</div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div class="p-8 md:p-10">
+        <div class="prose-shell max-w-none">
+          <Content />
+        </div>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

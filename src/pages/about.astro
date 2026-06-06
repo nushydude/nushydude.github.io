@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About" description="Background, current work, and how Anusha Dharmasena likes to build software.">
+  <section class="mx-auto max-w-5xl px-6 pb-10 pt-16 md:pb-14 md:pt-24">
+    <div class="surface-card-strong rounded-[2rem] p-8 md:p-10">
+      <p class="section-label">About</p>
+      <h1 class="mt-4 max-w-4xl text-5xl font-semibold tracking-[-0.06em] text-white md:text-7xl md:leading-[0.96]">
+        I like building software that stays useful after the first wave of excitement wears off.
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
+        I am a Melbourne-based tech lead working across retail digital delivery, personal product ideas, and occasional
+        domain-specific work that is more interesting than it has any right to be.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-6 py-8 md:py-10">
+    <div class="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+      <div class="surface-card rounded-[2rem] p-8 md:p-10">
+        <div class="prose-shell max-w-none text-base">
+          <p>
+            My path has taken me from Sri Lanka to Japan and then to Australia. The Japan years were particularly useful:
+            they drilled in precision, maintainability, and respect for the small implementation details that make software
+            feel dependable rather than merely functional.
+          </p>
+          <p>
+            In Australia the work broadened. I moved further into front-end architecture, delivery, and technical
+            leadership. I still enjoy writing code, but I am just as interested in the judgement around it: what to build,
+            what to cut, where complexity is justified, and where it is just ego in a nicer shirt.
+          </p>
+          <p>
+            Outside my day job I keep building. The projects tend to be practical: finance tooling, household systems, and
+            utilities with enough real-world friction to force better product decisions. I am generally more interested in
+            useful systems than hype cycles.
+          </p>
+        </div>
+      </div>
+
+      <aside class="space-y-6">
+        <div class="surface-card rounded-[2rem] p-6">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-sky-300">What I optimise for</p>
+          <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-300">
+            <li>Clear product shape before unnecessary feature growth.</li>
+            <li>Strong defaults and behaviour that feels sane without explanation.</li>
+            <li>Teams that can make good trade-offs without drama.</li>
+          </ul>
+        </div>
+        <div class="surface-card rounded-[2rem] p-6">
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-sky-300">Domains I keep returning to</p>
+          <ul class="mt-4 space-y-3 text-sm leading-7 text-slate-300">
+            <li>Digital product delivery in retail.</li>
+            <li>Personal finance software.</li>
+            <li>Household workflow tools.</li>
+            <li>Visual and educational software with richer constraints.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

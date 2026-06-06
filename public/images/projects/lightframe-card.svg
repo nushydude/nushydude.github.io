@@ -1,0 +1,29 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1120"/>
+      <stop offset="1" stop-color="#0B1724"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1310 150) rotate(134) scale(580 440)">
+      <stop stop-color="#FB7185" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FB7185" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" rx="44" fill="url(#bg)"/>
+  <rect width="1600" height="900" rx="44" fill="url(#glow)"/>
+  <rect x="72" y="72" width="1456" height="756" rx="32" fill="rgba(15,23,42,0.54)" stroke="rgba(251,113,133,0.22)"/>
+  <text x="112" y="180" fill="#FDA4AF" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="6">SMALL UTILITY BUILD</text>
+  <text x="112" y="318" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="96" font-weight="700">lightframe</text>
+  <text x="112" y="396" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="36">A sharper tool is often more interesting than a bigger one.</text>
+  <rect x="112" y="500" width="332" height="184" rx="26" fill="rgba(15,23,42,0.88)" stroke="rgba(148,163,184,0.16)"/>
+  <text x="144" y="560" fill="#FDA4AF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Signal</text>
+  <text x="144" y="610" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="30">Fast iteration</text>
+  <rect x="480" y="500" width="316" height="184" rx="26" fill="rgba(15,23,42,0.88)" stroke="rgba(148,163,184,0.16)"/>
+  <text x="512" y="560" fill="#FDA4AF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Why it matters</text>
+  <text x="512" y="610" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="30">Clear shape</text>
+  <g transform="translate(1200 264)">
+    <rect x="0" y="0" width="180" height="180" rx="30" stroke="rgba(253,164,175,0.55)" stroke-width="8"/>
+    <rect x="34" y="34" width="180" height="180" rx="30" stroke="rgba(248,250,252,0.32)" stroke-width="8"/>
+    <rect x="68" y="68" width="180" height="180" rx="30" fill="rgba(253,164,175,0.12)" stroke="rgba(253,164,175,0.4)" stroke-width="8"/>
+  </g>
+</svg>

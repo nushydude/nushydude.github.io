@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../lib/site';
+---
+
+<BaseLayout title="Contact" description="How to get in touch with Anusha Dharmasena.">
+  <section class="mx-auto max-w-5xl px-6 pb-10 pt-16 md:pb-14 md:pt-24">
+    <div class="surface-card-strong rounded-[2rem] p-8 md:p-10">
+      <p class="section-label">Contact</p>
+      <h1 class="mt-4 text-5xl font-semibold tracking-[-0.06em] text-white md:text-7xl md:leading-[0.96]">A small number of channels, kept current.</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
+        I would rather keep the contact surface narrow than pretend every old profile is still active. If you are reaching
+        out about a product, engineering, or collaboration question, a little context goes a long way.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-6 py-8 md:py-10">
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="surface-card rounded-[2rem] p-8">
+        <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white">Best starting point</h2>
+        <ul class="mt-5 space-y-4 text-sm leading-7 text-slate-300">
+          <li>
+            GitHub: <a class="text-sky-300 hover:text-sky-200" href={site.social.github}>{site.social.github}</a>
+          </li>
+          <li>LinkedIn and direct email can be added later once I am happy they are the right public endpoints for this site.</li>
+        </ul>
+      </div>
+      <div class="surface-card rounded-[2rem] p-8">
+        <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white">What helps in the first message</h2>
+        <ul class="mt-5 space-y-4 text-sm leading-7 text-slate-300">
+          <li>What you are building or trying to solve.</li>
+          <li>Why you thought I might be relevant.</li>
+          <li>Any repo links, screenshots, or useful background.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectCard from '../../components/projects/ProjectCard.astro';
+
+const projects = (await getCollection('projects', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.yearStart - a.data.yearStart,
+);
+---
+
+<BaseLayout title="Projects" description="Selected apps, products, and experiments by Anusha Dharmasena.">
+  <section class="mx-auto max-w-6xl px-6 pb-10 pt-16 md:pb-14 md:pt-24">
+    <div class="surface-card-strong rounded-[2rem] p-8 md:p-10">
+      <p class="section-label">Projects</p>
+      <h1 class="mt-4 text-5xl font-semibold tracking-[-0.06em] text-white md:text-7xl md:leading-[0.96]">Selected software products, tools, and experiments</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
+        A mix of personal products, client work, and smaller utilities. I tend to favour practical tools with a clear job
+        to do over flashy demos that do not survive contact with real use.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-6 py-8 md:py-10">
+    <div class="grid gap-6 lg:grid-cols-2">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,36 @@
+---
+interface Props {
+  post: {
+    id: string;
+    data: {
+      title: string;
+      summary: string;
+      publishedAt: Date;
+      tags: string[];
+    };
+  };
+}
+
+const { post } = Astro.props;
+const published = post.data.publishedAt.toLocaleDateString('en-AU', {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+});
+---
+
+<article class="surface-card group rounded-[1.75rem] p-6 md:p-7">
+  <p class="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-sky-300">{published}</p>
+  <h3 class="mb-3 text-2xl font-semibold tracking-[-0.04em] text-white md:text-[1.75rem]">
+    <a href={`/blog/${post.id}/`} class="inline-flex items-center gap-2 hover:text-sky-300">
+      {post.data.title}
+      <span class="text-slate-500 transition group-hover:translate-x-1 group-hover:text-sky-300">→</span>
+    </a>
+  </h3>
+  <p class="mb-5 text-sm leading-7 text-slate-300">{post.data.summary}</p>
+  <ul class="flex flex-wrap gap-2">
+    {post.data.tags.map((tag) => (
+      <li class="pill text-xs">{tag}</li>
+    ))}
+  </ul>
+</article>

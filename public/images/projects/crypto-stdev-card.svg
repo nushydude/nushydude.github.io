@@ -1,0 +1,29 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#081019"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1320 160) rotate(135) scale(570 420)">
+      <stop stop-color="#F59E0B" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" rx="44" fill="url(#bg)"/>
+  <rect width="1600" height="900" rx="44" fill="url(#glow)"/>
+  <rect x="72" y="72" width="1456" height="756" rx="32" fill="rgba(15,23,42,0.54)" stroke="rgba(245,158,11,0.22)"/>
+  <text x="112" y="180" fill="#FBBF24" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="6">MARKET SIGNALS TOOLING</text>
+  <text x="112" y="318" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="92" font-weight="700">crypto-stdev</text>
+  <text x="112" y="396" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="36">Signals, context, and fewer false certainties.</text>
+  <rect x="112" y="500" width="336" height="184" rx="26" fill="rgba(15,23,42,0.88)" stroke="rgba(148,163,184,0.16)"/>
+  <text x="144" y="560" fill="#FBBF24" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Idea</text>
+  <text x="144" y="610" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="30">Context over hype</text>
+  <rect x="484" y="500" width="316" height="184" rx="26" fill="rgba(15,23,42,0.88)" stroke="rgba(148,163,184,0.16)"/>
+  <text x="516" y="560" fill="#FBBF24" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Design pressure</text>
+  <text x="516" y="610" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="30">Show uncertainty</text>
+  <path d="M1180 588L1244 502L1300 544L1366 412L1432 468" stroke="#FBBF24" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1244" cy="502" r="10" fill="#F8FAFC"/>
+  <circle cx="1300" cy="544" r="10" fill="#F8FAFC"/>
+  <circle cx="1366" cy="412" r="10" fill="#F8FAFC"/>
+  <circle cx="1432" cy="468" r="10" fill="#F8FAFC"/>
+</svg>

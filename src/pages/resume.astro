@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Resume" description="Selected experience and resume download for Anusha Dharmasena.">
+  <section class="mx-auto max-w-5xl px-6 pb-10 pt-16 md:pb-14 md:pt-24">
+    <div class="surface-card-strong rounded-[2rem] p-8 md:p-10">
+      <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p class="section-label">Resume</p>
+          <h1 class="mt-4 max-w-4xl text-5xl font-semibold tracking-[-0.06em] text-white md:text-7xl md:leading-[0.96]">
+            Selected experience, current roles, and a straightforward PDF.
+          </h1>
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">
+            The short version: strong front-end and product instincts, solid engineering foundations, and a bias towards
+            software that stays maintainable under real use.
+          </p>
+        </div>
+        <a href="/resume/anusha-dharmasena-resume.pdf" class="button-primary whitespace-nowrap">Download PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-6 py-8 md:py-10">
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="surface-card rounded-[2rem] p-8">
+        <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white">Current work</h2>
+        <ul class="mt-5 space-y-4 text-sm leading-7 text-slate-300">
+          <li><span class="font-semibold text-white">David Jones:</span> tech lead work across digital delivery, execution quality, and technical judgement.</li>
+          <li><span class="font-semibold text-white">Lithodomos:</span> product and engineering work on the Ancient World web app.</li>
+          <li><span class="font-semibold text-white">Personal products:</span> ongoing work on Fiscava, pantry-ping, and other smaller tools.</li>
+        </ul>
+      </div>
+      <div class="surface-card rounded-[2rem] p-8">
+        <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white">Earlier grounding</h2>
+        <p class="mt-5 text-sm leading-7 text-slate-300">
+          Canon work in Japan gave me a deep engineering base in PDF, SVG, print, and systems that do not tolerate sloppy
+          thinking. That background still shows up in how I approach front-end architecture and delivery work now.
+        </p>
+      </div>
+      <div class="surface-card rounded-[2rem] p-8 md:col-span-2">
+        <h2 class="text-2xl font-semibold tracking-[-0.04em] text-white">Core strengths</h2>
+        <div class="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <div class="pill justify-center text-center">TypeScript and JavaScript product development</div>
+          <div class="pill justify-center text-center">Front-end architecture and maintainability</div>
+          <div class="pill justify-center text-center">Product delivery and technical leadership</div>
+          <div class="pill justify-center text-center">Practical systems thinking and UX judgement</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

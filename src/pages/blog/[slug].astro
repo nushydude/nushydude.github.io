@@ -1,0 +1,39 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const published = post.data.publishedAt.toLocaleDateString('en-AU', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<BaseLayout title={post.data.title} description={post.data.summary}>
+  <article class="mx-auto max-w-4xl px-6 pb-10 pt-16 md:pb-14 md:pt-24">
+    <div class="surface-card-strong rounded-[2rem] p-8 md:p-10">
+      <p class="section-label">{published}</p>
+      <h1 class="mt-4 text-5xl font-semibold tracking-[-0.06em] text-white md:text-7xl md:leading-[0.96]">{post.data.title}</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300 md:text-xl">{post.data.summary}</p>
+      <ul class="mt-8 flex flex-wrap gap-2">
+        {post.data.tags.map((tag) => <li class="pill text-xs">{tag}</li>)}
+      </ul>
+    </div>
+
+    <div class="surface-card mt-8 rounded-[2rem] p-8 md:p-10">
+      <div class="prose-shell max-w-none">
+        <Content />
+      </div>
+    </div>
+  </article>
+</BaseLayout>
