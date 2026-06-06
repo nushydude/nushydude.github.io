@@ -21,6 +21,13 @@ const published = post.data.publishedAt.toLocaleDateString('en-AU', {
 
 <BaseLayout title={post.data.title} description={post.data.summary}>
   <article class="mx-auto max-w-4xl px-6 pb-10 pt-16 md:pb-14 md:pt-24">
+    <div class="mb-6">
+      <a href="/blog/" class="inline-flex items-center gap-2 text-sm text-slate-400 transition hover:text-sky-300">
+        <span aria-hidden="true">←</span>
+        <span>Back to blog</span>
+      </a>
+    </div>
+
     <div class="surface-card-strong rounded-[2rem] p-8 md:p-10">
       <p class="section-label">{published}</p>
       <h1 class="mt-4 text-5xl font-semibold tracking-[-0.06em] text-white md:text-7xl md:leading-[0.96]">{post.data.title}</h1>
