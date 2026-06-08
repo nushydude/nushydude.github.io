@@ -40,6 +40,9 @@ const {
 const pageTitle = title === site.title ? site.title : `${title} | ${site.title}`;
 const canonical = new URL(Astro.url.pathname, site.url).toString();
 const ogImage = new URL(image, site.url).toString();
+// Only the default social card has known 1200×630 dimensions; custom page
+// images (app screenshots) vary, so don't claim dimensions we can't guarantee.
+const isDefaultOgImage = image === '/images/og/og-default.png';
 
 // ── Structured data (JSON-LD) ───────────────────────────────────────────────
 const personLd = {
@@ -124,8 +127,12 @@ const structuredData = JSON.stringify({
     <meta property="og:locale" content="en_AU" />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:alt" content={imageAlt} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    {isDefaultOgImage && (
+      <>
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+      </>
+    )}
     {type === 'article' && article && (
       <>
         {article.publishedTime && <meta property="article:published_time" content={article.publishedTime} />}

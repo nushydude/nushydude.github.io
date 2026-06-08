@@ -26,12 +26,17 @@
     box-shadow: 0 16px 36px -18px rgba(56, 189, 248, 0.9);
     cursor: pointer;
     opacity: 0;
+    pointer-events: none;
     transform: translateY(8px);
     transition: opacity 200ms ease, transform 200ms ease, box-shadow 200ms ease;
   }
 
+  /* The author `display: inline-flex` above overrides the UA `[hidden]`
+     rule, so the button stays in the layout — toggle interactivity and
+     visibility explicitly instead of relying on `hidden` to remove it. */
   .scroll-top:not([hidden]) {
     opacity: 1;
+    pointer-events: auto;
     transform: translateY(0);
   }
 
