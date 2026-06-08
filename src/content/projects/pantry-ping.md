@@ -19,24 +19,18 @@ yearStart: 2026
 sortOrder: 80
 coverImage: /images/projects/pantry-ping-card.svg
 heroImage:
-  src: /images/projects/pantry-ping/list.png
-  alt: pantry-ping shopping list screen with categorised items, priorities, and staple suggestions.
+  src: /images/projects/pantry-ping/desktop-landing.png
+  alt: pantry-ping desktop landing page — "shared grocery planning that actually works for a real household" with a sample aisle-grouped list.
 gallery:
-  - src: /images/projects/pantry-ping/list.png
-    alt: pantry-ping shopping list with categorised items, priorities, and "you usually buy now" suggestions.
-    caption: The shared shopping list — categorised and prioritised, with staple and habit suggestions.
-  - src: /images/projects/pantry-ping/pantry.png
-    alt: pantry-ping pantry screen tracking in-stock and out-of-stock items.
-    caption: Pantry tracking — when something runs out, it's added back to the list automatically.
-  - src: /images/projects/pantry-ping/staples.png
-    alt: pantry-ping recurring staples screen with due and paused templates.
-    caption: Recurring staples that regenerate on schedule, with due and paused states.
-  - src: /images/projects/pantry-ping/trip-mode.png
-    alt: pantry-ping in-store trip mode grouped by aisle with collection progress.
-    caption: Trip mode — an in-store view grouped by your store's aisle order.
-  - src: /images/projects/pantry-ping/ai-assist.png
-    alt: pantry-ping AI assist settings for connecting your own Claude or OpenAI key.
-    caption: Bring-your-own-key AI assist for meal suggestions and the household assistant.
+  - src: /images/projects/pantry-ping/desktop-landing.png
+    alt: pantry-ping desktop landing page showing the value proposition and a sample shopping list grouped by aisle.
+    caption: The desktop landing — shared grocery planning, with a sample list grouped by aisle rather than memory.
+  - src: /images/projects/pantry-ping/wall-plan-shop.png
+    alt: Three pantry-ping mobile screens side by side — the shared shopping list, pantry stock tracking, and in-store trip mode.
+    caption: Plan and shop on mobile — the shared list, pantry stock, and in-store trip mode grouped by your store's aisle order.
+  - src: /images/projects/pantry-ping/wall-automate-organise.png
+    alt: Three pantry-ping mobile screens side by side — recurring staples, store aisle profiles, and bring-your-own-key AI assist.
+    caption: Automate and organise — recurring staples, per-store aisle layouts, and bring-your-own-key AI assist.
 links:
   live: https://pantry-ping.vercel.app
   repo: https://github.com/nushydude/pantry-ping
