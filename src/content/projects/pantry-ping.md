@@ -10,6 +10,7 @@ stack:
   - Supabase
   - Drizzle
   - PWA
+  - MCP
 tags:
   - household
   - product
@@ -51,12 +52,14 @@ Most shopping-list apps are fine at being lists and weak at being systems. The h
 
 ## What it does
 
+- **Households built for real homes.** Passwordless sign-in (magic links or one-time codes), invite links and short join codes, and per-member feature access — members can start on a simplified, list-only view and have advanced features switched on as they need them.
 - **Real-time shared list.** Household-scoped items with quantity, note, category, priority, and assignee, edited live by several people at once, with optimistic updates and undo.
 - **Smart duplicate handling.** Item names are normalised, so adding something already on the list is caught and rejected instead of silently duplicated.
 - **Automatic categorisation.** A rules engine maps grocery names to aisles — produce, dairy, bakery, frozen, household, and so on — so the list groups itself.
 - **Pantry and recurring staples.** Lightweight in-stock and expiry tracking, plus recurring templates that regenerate due items on a schedule — guarded by a database lock so two people opening the app at once can't double-add.
 - **Trip mode.** An in-store view with bigger tap targets, aisle grouping per store, and a bulk archive at the end of a shop, with optional learning of each store's aisle order.
-- **Receipts, prices, and meal plans.** Post-trip receipt reconciliation with on-device OCR, price memory feeding budget estimates, and a simple meal planner.
+- **Receipts, prices, and meal plans.** Post-trip receipt reconciliation with on-device OCR, price memory feeding budget estimates, and a meal planner that can generate ingredients and add only what you're missing against the list and pantry.
+- **Notifications that respect the household.** Web push for items, recurring staples, and pantry expiry, with per-household preferences, quiet hours, and an assignee-only mode.
 - **An assistant you control.** A bring-your-own-key, natural-language assistant that turns "add milk and pause the bread staple" into a strict confirm-then-execute plan, plus voice add and barcode scanning.
 
 ## Architecture

@@ -48,10 +48,12 @@ DCA investors tend to fail in one of two ways: buying mechanically regardless of
 ## What it does
 
 - **Signals dashboard.** One card per pair in your DCA universe, each with a colour-coded action (buy / accumulate / trim / sell / hold), a conviction percentage and confidence level, a cycle-risk traffic-light bar, and the top contributing factors. A market-regime banner and a "things to do" panel sit above the cards.
-- **Best DCA.** A ranked list of the pairs most worth buying right now — computed by comparing spot price to a statistical target and surfacing the deepest dips first.
-- **Single-token analysis.** Price visualisation, the computed target versus spot, distance from target, and an instant "buy the dip?" read.
-- **Portfolio, transactions, and tax.** A ledger with cost basis, realised and unrealised P/L, allocation, rebalance hints, a per-coin targets editor, and tax-lot export.
-- **Market context.** A risk-on / risk-off / neutral regime badge, halving-cycle and altseason views, and the Bitcoin Fear &amp; Greed index.
+- **Best DCA.** A ranked list of the pairs most worth buying right now — recomputed nightly from each pair's mean, standard deviation, and average price, applying your own σ multiplier, and surfacing the deepest dips first. Your watch universe (symbols, quote currency, interval, σ) is per-user and editable.
+- **Single-token analysis.** Price visualisation, the computed target versus spot, distance from target, log-regression fair-value bands, and an instant "buy the dip?" read.
+- **Portfolio.** A holdings ledger computed on the fly from your transaction history — cost basis, realised and unrealised P/L, allocation, rebalance hints, a per-coin targets editor, a cross-asset correlation matrix, and a per-coin thesis journal.
+- **Transactions via Koinly.** A single Koinly CSV import is the source of truth: one export captures every exchange and wallet — including delisted pairs, cold-wallet activity, and fully-sold coins — that per-exchange syncs used to miss. A FIFO/HIFO realised-gains tax engine still backs the API, though the dedicated Tax and Exchanges pages have been retired from the UI in favour of this simpler path.
+- **Alerts.** Per-user price, drawdown, signal, and target rules delivered by web push, email, or digest, each with a cooldown and quiet hours so a noisy threshold can't spam you.
+- **Market context.** A macro snapshot — Fear & Greed, BTC dominance, ETH/BTC, total market cap, DXY, and the US 10-year yield, tagged risk-on/off — plus halving-cycle and altseason views and a live crypto news strip.
 
 ## How the signals work
 
@@ -61,7 +63,7 @@ An aggregator sums each direction's weighted votes and normalises by the total w
 
 ## Architecture
 
-crypto-stdev is a microservice-style system on Vercel. A public API gateway is the only browser-facing surface and owns market data and the signal engine; separate auth and user services sit behind a shared gateway key; and an MCP server exposes the account as a set of read and write tools, so an AI agent can query signals or record transactions — with personal access tokens exchanged for short-lived JWTs and every mutation audit-logged. The front end is React + TypeScript on Vite with TanStack Query and Chart.js; data comes from Binance, CoinGecko, alternative.me, and on-chain sources.
+crypto-stdev is a microservice-style system on Vercel. A public API gateway is the only browser-facing surface and owns market data and the signal engine; separate auth and user services sit behind a shared gateway key; and an MCP server exposes the account as 29 read and write tools, so an AI agent can query signals or record transactions — with personal access tokens exchanged for short-lived JWTs and every call audit-logged, and no secrets ever flowing through the MCP surface. The front end is React + TypeScript on Vite with TanStack Query and Chart.js; data comes from Binance, CoinGecko, alternative.me, and on-chain sources.
 
 ## Status
 
